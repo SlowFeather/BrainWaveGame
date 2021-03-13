@@ -1,0 +1,6 @@
+struct SoundTableData
+{
+	int id; //DescribeId
+    string str; //说明
+    string other; //其他
+};
