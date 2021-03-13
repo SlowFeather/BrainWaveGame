@@ -18,8 +18,22 @@
               "value": 0
             },
             {
-              "frame": 3,
+              "frame": 2.9833333333333334,
               "value": 1
+            }
+          ],
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 2.9833333333333334,
+              "value": true
+            },
+            {
+              "frame": 3,
+              "value": false
             }
           ]
         }
@@ -83,6 +97,21 @@
             {
               "frame": 1,
               "value": 255
+            }
+          ]
+        }
+      },
+      "lineEnd": {
+        "comps": {},
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 3,
+              "value": true
             }
           ]
         }
