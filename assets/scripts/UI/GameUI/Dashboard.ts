@@ -50,7 +50,9 @@ export default class Dashboard extends cc.Component {
         if (module==null) {
             return;
         }
-        this.endNumber=Number(DriveManager.Instance.brainModel.brain[0].Relaxation);
+        this.endNumber=Number(DriveManager.Instance.brainModel.brain[0].Concentration);
+        // this.endNumber=Number(DriveManager.Instance.brainModel.brain[0].Relaxation);
+
         this.StartLerp();
     }
     start () {

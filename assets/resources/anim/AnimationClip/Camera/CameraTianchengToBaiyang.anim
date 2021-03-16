@@ -1,0 +1,63 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "CameraTianchengToBaiyang",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 3,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Camera": {
+        "zoomRatio": [
+          {
+            "frame": 0,
+            "value": 2
+          },
+          {
+            "frame": 1.0166666666666666,
+            "value": 1
+          },
+          {
+            "frame": 2.0166666666666666,
+            "value": 1
+          },
+          {
+            "frame": 3,
+            "value": 2
+          }
+        ]
+      }
+    },
+    "props": {
+      "position": [
+        {
+          "frame": 1.0166666666666666,
+          "value": [
+            354.799,
+            174.654,
+            0
+          ]
+        },
+        {
+          "frame": 2,
+          "value": [
+            1020.154,
+            174.654,
+            0
+          ]
+        },
+        {
+          "frame": 3,
+          "value": [
+            1019,
+            175,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "events": []
+}

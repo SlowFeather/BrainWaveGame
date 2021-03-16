@@ -51,6 +51,8 @@ export default class CountDown extends cc.Component {
      */
     StartCountDown(callback:Function){
         //3分钟
+        // this.timeMinute=0;
+        // this.timeSecond=10;
         this.timeMinute=3;
         this.timeSecond=0;
         this.stoped=false;

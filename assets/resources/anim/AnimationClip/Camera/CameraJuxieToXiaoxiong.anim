@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "CameraJinniuToXiaoxiong",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 3,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Camera": {
+        "zoomRatio": [
+          {
+            "frame": 0,
+            "value": 2
+          },
+          {
+            "frame": 1,
+            "value": 1
+          },
+          {
+            "frame": 2,
+            "value": 1
+          },
+          {
+            "frame": 3,
+            "value": 2
+          }
+        ]
+      }
+    },
+    "props": {
+      "position": [
+        {
+          "frame": 1,
+          "value": [
+            428,
+            656,
+            0
+          ]
+        },
+        {
+          "frame": 2,
+          "value": [
+            748,
+            1059,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "events": []
+}

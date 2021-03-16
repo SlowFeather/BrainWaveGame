@@ -3,6 +3,7 @@ import { UIDef } from "../../Def/UIDef";
 import Game from "../../Game";
 import MessageDispatcher from "../../Manager/MessageDispatcher/MessageDispatcher";
 import SoundManager from "../../Manager/SoundManager";
+import UserManager from "../../Manager/UserManager/UserManager";
 import MathUtil from "../../Tools/MathUtil";
 import ResUtil from "../../Tools/ResUtil";
 import { TimeFormatType, TimeUtil } from "../../Tools/TimeUtil";
@@ -19,9 +20,9 @@ export default class StartUI extends cc.Component {
 
     start () {
 
-        SoundManager.playMusic(1);
+        //SoundManager.playMusic(1);
         
-
+        
         //cc.Node node=cc.instantiate( ResUtil.ResDictionary["StartUI"]);
         
         // ResUtil.ResDictionary["StartUI"];
@@ -43,16 +44,20 @@ export default class StartUI extends cc.Component {
 
     }
 
-    CreateBackground(prefab){
-        console.log("生成地板");
+    // CreateBackground(prefab){
+    //     console.log("生成地板");
         
-        // var newNode = cc.instantiate(prefab);
-        //cc.director.getScene().addChild(newNode);
-        // newNode.setParent(Game.Instance.GameScene);
-    }
+    //     // var newNode = cc.instantiate(prefab);
+    //     //cc.director.getScene().addChild(newNode);
+    //     // newNode.setParent(Game.Instance.GameScene);
+    // }
 
-    OnStartBtnClick(){""
-        console.log("点击了返回主界面按钮");
+    OnStartBtnClick(){
+        console.log("--> 点击了开始按钮");
+
+        //重置用户星座数量
+        UserManager.Instance.CurrentConstellationNumber=0;
+
         UIUtil.ShowUI(UIDef.DescribeUI,()=>{
             UIUtil.HideUI(UIDef.StartUI);
         });

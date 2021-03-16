@@ -23,7 +23,13 @@ export enum MessageDef {
     /**
      * 脑电游戏结束
      */
-     BrainGameEnd="BrainGameEnd",
+    BrainGameEnd="BrainGameEnd",
+
+    /**
+     * 某个星座播放完毕
+     * number
+     */
+    ConstellationAnimationEnd="ConstellationAnimationEnd",
 
     /**
      * 脑机断开
@@ -42,6 +48,7 @@ export enum MessageDef {
 
     /**
      * 脑机值发生变化
+     * BrainModule
      */
     BrainValueChangeMessage="BrainValueChangeMessage",
 

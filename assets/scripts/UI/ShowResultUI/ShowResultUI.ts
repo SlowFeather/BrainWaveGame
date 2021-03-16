@@ -1,6 +1,7 @@
 import { StorageDef } from "../../Def/StorageDef";
 import { UIDef } from "../../Def/UIDef";
 import DriveManager from "../../Manager/DriveManager/DriveManager";
+import UserManager from "../../Manager/UserManager/UserManager";
 import StorageUtil from "../../Tools/StorageUtil";
 import UIUtil from "../../Tools/UIUtil";
 
@@ -29,7 +30,9 @@ export default class ShowResultUI extends cc.Component {
         DriveManager.Instance.StopPingDrive();
 
         
-        let score=StorageUtil.getData(StorageDef.StarLight,0);
+        // let score=StorageUtil.getData(StorageDef.StarLight,0);
+        let score=UserManager.Instance.CurrentConstellationNumber;
+
 
         //判断当前得分，得几分就得几个奖杯
         for (let index = 0; index < this.allTrophy.length; index++) {

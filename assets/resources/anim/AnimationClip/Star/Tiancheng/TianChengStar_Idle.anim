@@ -3,7 +3,7 @@
   "_name": "TianChengStar_Idle",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 1,
+  "_duration": 4,
   "sample": 60,
   "speed": 1,
   "wrapMode": 2,
@@ -22,7 +22,7 @@
               }
             },
             {
-              "frame": 0.5,
+              "frame": 2,
               "value": {
                 "__type__": "cc.Vec2",
                 "x": 2,
@@ -30,7 +30,7 @@
               }
             },
             {
-              "frame": 1,
+              "frame": 4,
               "value": {
                 "__type__": "cc.Vec2",
                 "x": 1,

@@ -64,6 +64,14 @@ export default class DescribeUI extends cc.Component {
         .to(1, { opacity : 255 })
         .to(1, { opacity: 0 })
         .to(1, { opacity: 255 })
+        .to(1, { opacity: 0 })
+        .call(()=>{
+            //切换文字
+            this.describeLab.string=DescribeTableData.getById(3).str;
+            })
+            .to(1, { opacity : 255 })
+            .to(1, { opacity: 0 })
+            .to(1, { opacity: 255 })
         .call(()=>{
             //切换页面
             UIUtil.ShowUI(UIDef.GameUI,()=>{

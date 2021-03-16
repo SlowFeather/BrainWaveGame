@@ -123,23 +123,16 @@ export default class RadarChartBz extends cc.Component {
         if (module==null) {
             return;
         }
-        // this.dataArray[0]=Number(module.brain[0].LowAlpha);
-        // this.dataArray[1]=Number(module.brain[0].Theta);
-        // this.dataArray[2]=Number(module.brain[0].Delta);
-        // this.dataArray[3]=Number(module.brain[0].HighGamma);
-        // this.dataArray[4]=Number(module.brain[0].LowGamma);
-        // this.dataArray[5]=Number(module.brain[0].HighBeta);
-        // this.dataArray[6]=Number(module.brain[0].LowBeta);
-        // this.dataArray[7]=Number(module.brain[0].HighAlpha);
 
-        this.LowAlpha=Number(module.brain[0].LowAlpha);
-        this.Theta=Number(module.brain[0].Theta);
-        this.Delta=Number(module.brain[0].Delta);
-        this.HighGamma=Number(module.brain[0].HighGamma);
-        this.LowGamma=Number(module.brain[0].LowGamma);
-        this.HighBeta=Number(module.brain[0].HighBeta);
-        this.LowBeta=Number(module.brain[0].LowBeta);
-        this.HighAlpha=Number(module.brain[0].HighAlpha);
+
+        // this.LowAlpha=Number(module.brain[0].LowAlpha);
+        // this.Theta=Number(module.brain[0].Theta);
+        // this.Delta=Number(module.brain[0].Delta);
+        // this.HighGamma=Number(module.brain[0].HighGamma);
+        // this.LowGamma=Number(module.brain[0].LowGamma);
+        // this.HighBeta=Number(module.brain[0].HighBeta);
+        // this.LowBeta=Number(module.brain[0].LowBeta);
+        // this.HighAlpha=Number(module.brain[0].HighAlpha);
 
     }
 
@@ -319,25 +312,25 @@ export default class RadarChartBz extends cc.Component {
         graphics.lineWidth = this.bglineWidth;
         
         //竖线
-        graphics.moveTo(0, this.maxNumber);
-        graphics.lineTo(0,-this.maxNumber);
+        // graphics.moveTo(0, this.maxNumber);
+        // graphics.lineTo(0,-this.maxNumber);
 
         //横线
-        graphics.moveTo(this.maxNumber, 0);
-        graphics.lineTo(-this.maxNumber,0);
+        // graphics.moveTo(this.maxNumber, 0);
+        // graphics.lineTo(-this.maxNumber,0);
 
         //中间圆圈
-        graphics.circle(0,0,this.maxNumber*0.8);
-        graphics.circle(0,0,this.maxNumber*0.7);
-        graphics.circle(0,0,this.maxNumber*0.6);
-        graphics.circle(0,0,this.maxNumber*0.5);
-        graphics.circle(0,0,this.maxNumber*0.4);
-        graphics.circle(0,0,this.maxNumber*0.3);
-        graphics.circle(0,0,this.maxNumber*0.2);
-        graphics.circle(0,0,this.maxNumber*0.1);
+        // graphics.circle(0,0,this.maxNumber*0.8);
+        // graphics.circle(0,0,this.maxNumber*0.7);
+        // graphics.circle(0,0,this.maxNumber*0.6);
+        // graphics.circle(0,0,this.maxNumber*0.5);
+        // graphics.circle(0,0,this.maxNumber*0.4);
+        // graphics.circle(0,0,this.maxNumber*0.3);
+        // graphics.circle(0,0,this.maxNumber*0.2);
+        // graphics.circle(0,0,this.maxNumber*0.1);
 
-        graphics.fill();
-        graphics.stroke();
+        // graphics.fill();
+        // graphics.stroke();
     }
 
     Lerp(start:number,end:number,time:number){
