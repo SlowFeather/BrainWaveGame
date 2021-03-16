@@ -39,7 +39,6 @@ export class HttpUtil {
                     let httpStatus = xhr.statusText;
                     // callback(true, JSON.parse(response));
                     callback(true, response);
-
                 } else {
                     callback(false, response);
                 }

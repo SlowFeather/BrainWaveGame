@@ -86,7 +86,6 @@ export default class DescribeUI extends cc.Component {
             UIUtil.HideUI(UIDef.DescribeUI);
         });
 
-
     }
     OnSkipBtnClick(){
         console.log("点击了跳过按钮");

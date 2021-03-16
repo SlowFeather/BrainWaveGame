@@ -15,14 +15,15 @@ export default class DriveManager extends cc.Component {
     }
 //#endregion
 
-    host:string="http://127.0.0.1:8090"; //http://127.0.0.1:8090?module=Brain
+    // host:string="http://127.0.0.1:8090"; //http://127.0.0.1:8090?module=Brain
+    
+    // param:any={};
     // param:any={"module":"Brain"};
-    param:any={};
 
 
 
-    // host:string="http://127.0.0.1:1111/hello.php";
-    // param:any={"id":"yingxiangshijie"};
+    host:string="http://127.0.0.1:1111/hello.php";
+    param:any={"id":"yingxiangshijie"};
 
 
 

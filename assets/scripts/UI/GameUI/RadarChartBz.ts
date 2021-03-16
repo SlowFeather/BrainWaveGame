@@ -124,6 +124,23 @@ export default class RadarChartBz extends cc.Component {
             return;
         }
 
+        this.LowAlpha=MathUtil.reMap(Number(module.brain[0].LowAlpha),0,16777216,0,100) ;
+        this.Theta=MathUtil.reMap(Number(module.brain[0].Theta),0,16777216,0,100) ;
+        this.Delta=MathUtil.reMap(Number(module.brain[0].Delta),0,16777216,0,100) ;
+        this.HighGamma=MathUtil.reMap(Number(module.brain[0].HighGamma),0,16777216,0,100) ;
+        this.LowGamma=MathUtil.reMap(Number(module.brain[0].LowGamma),0,16777216,0,100) ;
+        this.HighBeta=MathUtil.reMap(Number(module.brain[0].HighBeta),0,16777216,0,100) ;
+        this.LowBeta=MathUtil.reMap(Number(module.brain[0].LowBeta),0,16777216,0,100) ;
+        this.HighAlpha=MathUtil.reMap(Number(module.brain[0].HighAlpha),0,16777216,0,100) ;
+
+
+        // this.Theta=Number(module.brain[0].Theta);
+        // this.Delta=Number(module.brain[0].Delta);
+        // this.HighGamma=Number(module.brain[0].HighGamma);
+        // this.LowGamma=Number(module.brain[0].LowGamma);
+        // this.HighBeta=Number(module.brain[0].HighBeta);
+        // this.LowBeta=Number(module.brain[0].LowBeta);
+        // this.HighAlpha=Number(module.brain[0].HighAlpha);
 
         // this.LowAlpha=Number(module.brain[0].LowAlpha);
         // this.Theta=Number(module.brain[0].Theta);
@@ -133,6 +150,8 @@ export default class RadarChartBz extends cc.Component {
         // this.HighBeta=Number(module.brain[0].HighBeta);
         // this.LowBeta=Number(module.brain[0].LowBeta);
         // this.HighAlpha=Number(module.brain[0].HighAlpha);
+
+        // 0-16777216
 
     }
 
