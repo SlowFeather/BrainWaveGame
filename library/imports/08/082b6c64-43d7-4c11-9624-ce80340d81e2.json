@@ -1,0 +1,14 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "renwu1_tex",
+  "_objFlags": 0,
+  "_native": "",
+  "_atlasJson": "{\"width\":2048,\"imagePath\":\"renwu1_tex.png\",\"height\":2048,\"name\":\"renwu1\",\"SubTexture\":[{\"width\":427,\"y\":1,\"height\":483,\"name\":\"图层_3\",\"x\":676},{\"width\":673,\"y\":1,\"height\":1266,\"name\":\"图层_2\",\"x\":1},{\"width\":357,\"y\":1269,\"height\":710,\"name\":\"图层_4\",\"x\":855},{\"width\":405,\"y\":1269,\"height\":558,\"name\":\"图层_5\",\"x\":1214},{\"width\":399,\"y\":1269,\"height\":737,\"name\":\"图层_6\",\"x\":454},{\"width\":352,\"y\":1,\"height\":333,\"name\":\"图层_32\",\"x\":1621},{\"width\":186,\"y\":1829,\"height\":148,\"name\":\"图层_29\",\"x\":1214},{\"width\":175,\"y\":1829,\"height\":152,\"name\":\"图层 29_0\",\"x\":1402},{\"width\":451,\"y\":1269,\"height\":747,\"name\":\"图层_7\",\"x\":1},{\"width\":71,\"y\":1983,\"height\":52,\"name\":\"youyan\",\"x\":1025},{\"width\":159,\"y\":1979,\"height\":40,\"name\":\"zuoyan\",\"x\":1214},{\"width\":26,\"y\":1829,\"height\":116,\"name\":\"bizi\",\"x\":1579},{\"width\":76,\"y\":1983,\"height\":44,\"name\":\"youmeimao\",\"x\":1098},{\"width\":168,\"y\":1983,\"height\":33,\"name\":\"zuomeimao\",\"x\":855},{\"width\":42,\"y\":2008,\"height\":19,\"name\":\"zui\",\"x\":454}]}",
+  "_texture": {
+    "__uuid__": "8766e632-457a-43dd-82cc-4fe192ae9fc7"
+  },
+  "texture": {
+    "__uuid__": "8766e632-457a-43dd-82cc-4fe192ae9fc7"
+  },
+  "_textureAtlasData": null
+}

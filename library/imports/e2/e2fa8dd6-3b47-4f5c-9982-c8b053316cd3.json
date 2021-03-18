@@ -1,0 +1,14 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "renwu2(1)_tex",
+  "_objFlags": 0,
+  "_native": "",
+  "_atlasJson": "{\"width\":2048,\"imagePath\":\"renwu2(1)_tex.png\",\"height\":2048,\"name\":\"renwu2(1)\",\"SubTexture\":[{\"width\":370,\"y\":1,\"height\":578,\"name\":\"图层_27\",\"x\":866},{\"width\":385,\"y\":1,\"height\":473,\"name\":\"图层_11\",\"x\":1238},{\"width\":336,\"y\":581,\"height\":480,\"name\":\"图层_13\",\"x\":866},{\"width\":449,\"y\":476,\"height\":368,\"name\":\"图层_12\",\"x\":1238},{\"width\":863,\"y\":1,\"height\":2009,\"name\":\"图层_10\",\"x\":1},{\"width\":89,\"y\":539,\"height\":95,\"name\":\"图层_30\",\"x\":1828},{\"width\":181,\"y\":389,\"height\":80,\"name\":\"图层_29\",\"x\":1828},{\"width\":137,\"y\":389,\"height\":217,\"name\":\"图层_28\",\"x\":1689},{\"width\":83,\"y\":539,\"height\":41,\"name\":\"图层_32\",\"x\":1919},{\"width\":180,\"y\":471,\"height\":66,\"name\":\"图层_31\",\"x\":1828},{\"width\":412,\"y\":1,\"height\":386,\"name\":\"图层_23\",\"x\":1625}]}",
+  "_texture": {
+    "__uuid__": "a824fae6-8f6d-4ee7-9885-6d208dd97935"
+  },
+  "texture": {
+    "__uuid__": "a824fae6-8f6d-4ee7-9885-6d208dd97935"
+  },
+  "_textureAtlasData": null
+}

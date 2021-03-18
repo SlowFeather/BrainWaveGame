@@ -1,0 +1,6 @@
+struct SoundTableData
+{
+	int id; //soundId 
+    string path; //文件路径
+    string str; //说明
+};

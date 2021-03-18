@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "星空",
+    "texture": "4c8ce952-2624-4c91-bbbd-e4a63b0dd087",
+    "atlas": "",
+    "rect": [
+      62,
+      31,
+      704,
+      414
+    ],
+    "offset": [
+      -20.5,
+      33
+    ],
+    "originalSize": [
+      869,
+      542
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

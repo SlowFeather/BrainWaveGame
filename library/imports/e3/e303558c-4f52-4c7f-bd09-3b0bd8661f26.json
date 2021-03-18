@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xiakedou_tex",
+    "texture": "485a2103-4970-4ce3-b925-dc4117871a19",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      1282,
+      986
+    ],
+    "offset": [
+      -382,
+      18
+    ],
+    "originalSize": [
+      2048,
+      1024
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

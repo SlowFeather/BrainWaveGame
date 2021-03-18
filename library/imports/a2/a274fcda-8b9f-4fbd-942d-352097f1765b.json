@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tishiEnd",
+    "texture": "a94e9db1-ead9-49c9-9bcb-1c51c243e90a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      582,
+      390
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      582,
+      390
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

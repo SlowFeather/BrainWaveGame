@@ -1,0 +1,7 @@
+{
+  "__type__": "cc.TextAsset",
+  "_name": "SoundTableData",
+  "_objFlags": 0,
+  "_native": "",
+  "text": "int,string,string\r\nsoundId ,文件路径,说明\r\nid,path,str\r\n1,\"audio/zhubeijing\",\"背景音乐\"\r\n2,\"audio/anjianyin\",\"背景音乐\"\r\n3,\"audio/xingxingyin\",\"背景音乐\"\r\n4,\"audio/xingzuoyin\",\"背景音乐\"\r\n\r\n"
+}

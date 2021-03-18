@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yibiaopanEnd",
+    "texture": "f116b918-7329-4a8b-9704-dfce25e54e23",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      273,
+      603
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      273,
+      603
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

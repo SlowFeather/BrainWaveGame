@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xingzuobackground",
+    "texture": "2339cc38-e848-436c-8e34-42aa5b0d9252",
+    "atlas": "",
+    "rect": [
+      0,
+      1,
+      198,
+      197
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      198,
+      200
+    ],
+    "capInsets": [
+      99,
+      96.5,
+      97,
+      94.5
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "白羊座",
+    "texture": "01e31aac-acd7-4388-946b-3ece475e0ac5",
+    "atlas": "",
+    "rect": [
+      4,
+      4,
+      183,
+      195
+    ],
+    "offset": [
+      2,
+      -1.5
+    ],
+    "originalSize": [
+      187,
+      200
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

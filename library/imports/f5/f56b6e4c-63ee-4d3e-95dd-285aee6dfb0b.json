@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xingkong",
+    "texture": "f32f2377-2891-4fee-98a6-f9193767fb7d",
+    "atlas": "",
+    "rect": [
+      39,
+      10,
+      566,
+      300
+    ],
+    "offset": [
+      -16.5,
+      23
+    ],
+    "originalSize": [
+      677,
+      366
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

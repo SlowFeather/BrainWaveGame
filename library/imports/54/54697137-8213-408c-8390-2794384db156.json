@@ -1,0 +1,14 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "cl背景4_tex",
+  "_objFlags": 0,
+  "_native": "",
+  "_atlasJson": "{\"width\":2048,\"imagePath\":\"cl背景4_tex.png\",\"height\":1024,\"name\":\"cl背景4\",\"SubTexture\":[{\"width\":640,\"y\":1,\"height\":640,\"name\":\"图层_78\",\"x\":1},{\"width\":290,\"y\":1,\"height\":500,\"name\":\"图层_35\",\"x\":1285},{\"width\":129,\"y\":619,\"height\":80,\"name\":\"图层_63\",\"x\":784},{\"width\":139,\"y\":619,\"height\":93,\"name\":\"图层 63_0\",\"x\":643},{\"width\":279,\"y\":503,\"height\":158,\"name\":\"图层_65\",\"x\":1192},{\"width\":640,\"y\":1,\"height\":420,\"name\":\"图层_24\",\"x\":643},{\"width\":547,\"y\":423,\"height\":194,\"name\":\"图层_73\",\"x\":643}]}",
+  "_texture": {
+    "__uuid__": "35710d70-dfc7-4a7b-b817-6a8dec7161af"
+  },
+  "texture": {
+    "__uuid__": "35710d70-dfc7-4a7b-b817-6a8dec7161af"
+  },
+  "_textureAtlasData": null
+}

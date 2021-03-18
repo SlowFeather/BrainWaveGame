@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "巨蟹座",
+    "texture": "aca9b879-fa0e-4792-a225-bac212c9206f",
+    "atlas": "",
+    "rect": [
+      0,
+      4,
+      207,
+      193
+    ],
+    "offset": [
+      -3,
+      -0.5
+    ],
+    "originalSize": [
+      213,
+      200
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

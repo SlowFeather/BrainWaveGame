@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "renwu3_tex",
+    "texture": "bfbf36a3-f29a-4af6-b889-b2eee8dce524",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      2045,
+      1956
+    ],
+    "offset": [
+      -0.5,
+      45
+    ],
+    "originalSize": [
+      2048,
+      2048
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

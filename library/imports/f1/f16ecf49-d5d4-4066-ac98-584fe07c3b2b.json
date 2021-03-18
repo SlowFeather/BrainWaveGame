@@ -1,0 +1,14 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "xiakedou_tex",
+  "_objFlags": 0,
+  "_native": "",
+  "_atlasJson": "{\"width\":2048,\"imagePath\":\"xiakedou_tex.png\",\"height\":1024,\"name\":\"xiakedou\",\"SubTexture\":[{\"width\":640,\"y\":1,\"height\":640,\"name\":\"图层_3\",\"x\":1},{\"width\":123,\"y\":883,\"height\":104,\"name\":\"IMG_0844\",\"x\":1},{\"width\":133,\"y\":883,\"height\":78,\"name\":\"图层_71\",\"x\":126},{\"width\":139,\"y\":775,\"height\":74,\"name\":\"图层 71_0\",\"x\":134},{\"width\":37,\"y\":851,\"height\":15,\"name\":\"图层_73\",\"x\":134},{\"width\":21,\"y\":851,\"height\":22,\"name\":\"图层 73_0\",\"x\":201},{\"width\":26,\"y\":851,\"height\":20,\"name\":\"图层 73_1\",\"x\":173},{\"width\":24,\"y\":868,\"height\":11,\"name\":\"图层 73_2\",\"x\":134},{\"width\":437,\"y\":643,\"height\":130,\"name\":\"图层 73_3\",\"x\":1},{\"width\":131,\"y\":775,\"height\":106,\"name\":\"IMG_0844_0\",\"x\":1},{\"width\":640,\"y\":1,\"height\":396,\"name\":\"图层_104\",\"x\":643}]}",
+  "_texture": {
+    "__uuid__": "485a2103-4970-4ce3-b925-dc4117871a19"
+  },
+  "texture": {
+    "__uuid__": "485a2103-4970-4ce3-b925-dc4117871a19"
+  },
+  "_textureAtlasData": null
+}

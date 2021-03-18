@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yibiao",
+    "texture": "d15eccdd-4ce6-4712-a347-87e6bff81b72",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      151,
+      126
+    ],
+    "offset": [
+      0,
+      2
+    ],
+    "originalSize": [
+      151,
+      130
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "小熊座",
+    "texture": "50f17c9c-a62f-4e93-90a2-47a1bb0750bb",
+    "atlas": "",
+    "rect": [
+      1,
+      4,
+      209,
+      196
+    ],
+    "offset": [
+      -1,
+      -2
+    ],
+    "originalSize": [
+      213,
+      200
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

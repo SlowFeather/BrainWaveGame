@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "天平座",
+    "texture": "25da288b-ed5b-4ce7-b1d5-f0cd789bd5f9",
+    "atlas": "",
+    "rect": [
+      5,
+      4,
+      228,
+      193
+    ],
+    "offset": [
+      1,
+      -0.5
+    ],
+    "originalSize": [
+      236,
+      200
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
