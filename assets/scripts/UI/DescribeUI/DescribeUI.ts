@@ -1,5 +1,8 @@
 import { UIDef } from "../../Def/UIDef";
+import SoundManager from "../../Manager/SoundManager";
 import { DescribeTableData } from "../../StaticDatas/DescribeTableData";
+
+
 import UIUtil from "../../Tools/UIUtil";
 
 const {ccclass, property} = cc._decorator;
@@ -81,6 +84,8 @@ export default class DescribeUI extends cc.Component {
         .start();
     }
     OnBackBtnClick(){
+        SoundManager.playEffect(2);
+
         console.log("点击了返回主界面按钮");
         UIUtil.ShowUI(UIDef.StartUI,()=>{
             UIUtil.HideUI(UIDef.DescribeUI);

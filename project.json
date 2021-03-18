@@ -1,7 +1,7 @@
 {
   "engine": "cocos-creator-js",
   "packages": "packages",
-  "name": "BrainWaveTest",
+  "name": "BrainWaveGame",
   "id": "8907e40b-acdd-424e-b5c1-6671a58b1f30",
   "version": "2.3.2"
 }

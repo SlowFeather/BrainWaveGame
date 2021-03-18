@@ -2,6 +2,7 @@ import { MessageDef } from "../../Def/MessageDef";
 import { UIDef } from "../../Def/UIDef";
 import DriveManager from "../../Manager/DriveManager/DriveManager";
 import MessageDispatcher from "../../Manager/MessageDispatcher/MessageDispatcher";
+import SoundManager from "../../Manager/SoundManager";
 import ResUtil from "../../Tools/ResUtil";
 import UIUtil from "../../Tools/UIUtil";
 import CountDown from "./CountDown";
@@ -80,6 +81,8 @@ export default class GameUI extends cc.Component {
 
     OnBackBtnClick(){
         console.log("--> 点击了回到主页面按钮");
+        SoundManager.playEffect(2);
+
         UIUtil.ShowUI(UIDef.StartUI,()=>{
             UIUtil.HideUI(UIDef.GameUI);
         });

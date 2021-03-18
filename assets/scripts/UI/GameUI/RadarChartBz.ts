@@ -123,15 +123,80 @@ export default class RadarChartBz extends cc.Component {
         if (module==null) {
             return;
         }
+        //0-16777216
 
-        this.LowAlpha=MathUtil.reMap(Number(module.brain[0].LowAlpha),0,16777216,0,100) ;
-        this.Theta=MathUtil.reMap(Number(module.brain[0].Theta),0,16777216,0,100) ;
-        this.Delta=MathUtil.reMap(Number(module.brain[0].Delta),0,16777216,0,100) ;
-        this.HighGamma=MathUtil.reMap(Number(module.brain[0].HighGamma),0,16777216,0,100) ;
-        this.LowGamma=MathUtil.reMap(Number(module.brain[0].LowGamma),0,16777216,0,100) ;
-        this.HighBeta=MathUtil.reMap(Number(module.brain[0].HighBeta),0,16777216,0,100) ;
-        this.LowBeta=MathUtil.reMap(Number(module.brain[0].LowBeta),0,16777216,0,100) ;
-        this.HighAlpha=MathUtil.reMap(Number(module.brain[0].HighAlpha),0,16777216,0,100) ;
+        let lowAlpha=Number(module.brain[0].LowAlpha);
+        let theta=Number(module.brain[0].Theta);
+        let delta=Number(module.brain[0].Delta);
+        let highGamma=Number(module.brain[0].HighGamma);
+        let lowGamma=Number(module.brain[0].LowGamma);
+        let highBeta=Number(module.brain[0].HighBeta);
+        let lowBeta=Number(module.brain[0].LowBeta);
+        let highAlpha=Number(module.brain[0].HighAlpha);
+
+        let coefficient=100000;
+
+        if (lowAlpha<=coefficient) {
+            lowAlpha= lowAlpha*coefficient;
+            if (lowAlpha>=16777216) {
+                lowAlpha=16777216;
+            }
+        }
+        if (theta<=coefficient) {
+            theta= theta*coefficient;
+            if (theta>=16777216) {
+                theta=16777216;
+            }
+        }
+        if (delta<=coefficient) {
+            delta= delta*coefficient;
+            if (delta>=16777216) {
+                delta=16777216;
+            }
+        }
+        if (highGamma<=coefficient) {
+            highGamma= highGamma*coefficient;
+            if (highGamma>=16777216) {
+                highGamma=16777216;
+            }
+        }
+        if (lowGamma<=coefficient) {
+            lowGamma= lowGamma*coefficient;
+            if (lowGamma>=16777216) {
+                lowGamma=16777216;
+            }
+        }
+        if (highBeta<=coefficient) {
+            highBeta= highBeta*coefficient;
+            if (highBeta>=16777216) {
+                highBeta=16777216;
+            }
+        }
+        if (lowBeta<=coefficient) {
+            lowBeta= lowBeta*coefficient;
+            if (lowBeta>=16777216) {
+                lowBeta=16777216;
+            }
+        }
+        if (highAlpha<=coefficient) {
+            highAlpha= highAlpha*coefficient;
+            if (highAlpha>=16777216) {
+                highAlpha=16777216;
+            }
+        }
+
+
+
+
+        this.LowAlpha=MathUtil.reMap(lowAlpha,0,16777216,0,100);
+        this.Theta=MathUtil.reMap(theta,0,16777216,0,100) ;
+        this.Delta=MathUtil.reMap(delta,0,16777216,0,100) ;
+        this.HighGamma=MathUtil.reMap(highGamma,0,16777216,0,100) ;
+        this.LowGamma=MathUtil.reMap(lowGamma,0,16777216,0,100) ;
+        this.HighBeta=MathUtil.reMap(Number(highBeta),0,16777216,0,100) ;
+        this.LowBeta=MathUtil.reMap(Number(lowBeta),0,16777216,0,100) ;
+        this.HighAlpha=MathUtil.reMap(Number(highAlpha),0,16777216,0,100) ;
+        console.log("--->LowAlpha 原："+Number(module.brain[0].LowAlpha)+"-后："+lowAlpha+"-最后："+this.LowAlpha);
 
 
         // this.Theta=Number(module.brain[0].Theta);

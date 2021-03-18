@@ -20,7 +20,7 @@ export default class StartUI extends cc.Component {
 
     start () {
 
-        //SoundManager.playMusic(1);
+        SoundManager.playMusic(1);
         
         
         //cc.Node node=cc.instantiate( ResUtil.ResDictionary["StartUI"]);
@@ -54,6 +54,7 @@ export default class StartUI extends cc.Component {
 
     OnStartBtnClick(){
         console.log("--> 点击了开始按钮");
+        SoundManager.playEffect(2);
 
         //重置用户星座数量
         UserManager.Instance.CurrentConstellationNumber=0;

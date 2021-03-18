@@ -454,7 +454,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 720,
-      "height": 90.39999999999999
+      "height": 103.96
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -518,7 +518,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 612,
-      "height": 50.4
+      "height": 57.96
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -530,7 +530,7 @@
       "ctor": "Float64Array",
       "array": [
         -360,
-        -11.494284219640694,
+        -13.218426852586799,
         0,
         0,
         0,
@@ -573,7 +573,7 @@
     "_string": "请正确佩戴脑电波设备，集中注意力，",
     "_N$string": "请正确佩戴脑电波设备，集中注意力，",
     "_fontSize": 36,
-    "_lineHeight": 40,
+    "_lineHeight": 46,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -596,7 +596,7 @@
     "asset": {
       "__uuid__": "65df6040-66d8-4098-ba19-473704a1c960"
     },
-    "fileId": "adP2HcoWZC27mvIHx2sAzt",
+    "fileId": "b2/w0duN9PUZ0aK6HUf6JZ",
     "sync": false
   },
   {
@@ -627,7 +627,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 720,
-      "height": 50.4
+      "height": 57.96
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -639,7 +639,7 @@
       "ctor": "Float64Array",
       "array": [
         -360,
-        -51.49428421964069,
+        -59.2184268525868,
         0,
         0,
         0,
@@ -682,7 +682,7 @@
     "_string": "尽量保持专注，看看您可以点亮多少星座吧！",
     "_N$string": "尽量保持专注，看看您可以点亮多少星座吧！",
     "_fontSize": 36,
-    "_lineHeight": 40,
+    "_lineHeight": 46,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -705,7 +705,7 @@
     "asset": {
       "__uuid__": "65df6040-66d8-4098-ba19-473704a1c960"
     },
-    "fileId": "909LOmjJdNmpAaqA0XiRKM",
+    "fileId": "0ftk0wdGFE1pzvVl3+qa6N",
     "sync": false
   },
   {
@@ -724,7 +724,7 @@
     "_N$font": null,
     "_N$cacheMode": 0,
     "_N$maxWidth": 0,
-    "_N$lineHeight": 40,
+    "_N$lineHeight": 46,
     "_N$imageAtlas": null,
     "_N$handleTouchEvent": true,
     "_id": ""
@@ -1295,8 +1295,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -521.74,
-        287.405,
+        -0.93,
+        -241.825,
         0,
         0,
         0,
@@ -1514,7 +1514,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "94a3bb14-d98c-43bc-b030-25e31bce8f2d"
+      "__uuid__": "0d4e7b66-fdd8-438d-a3fa-b8b94fc0b8ed"
     },
     "_type": 1,
     "_sizeMode": 0,

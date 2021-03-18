@@ -1,4 +1,6 @@
-import { TableReader, ReadTable } from "./TableReader"
+import { ReadTable, TableReader } from "../Tools/TableReader";
+
+
 
 export class DescribeTableData
 {

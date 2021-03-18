@@ -5,7 +5,7 @@ export default class SoundManager {
 
     static playMusic(soundId: number, volume?: number) {
         const animPath = SoundTableData.getById(soundId).path;
-
+        
         cc.loader.loadRes(animPath, cc.AudioClip, function (err, clip) {
             var audioID = cc.audioEngine.playMusic(clip, true);
         });

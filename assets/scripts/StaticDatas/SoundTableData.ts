@@ -1,6 +1,5 @@
-// import { TableReader, ReadTable } from "../TableReader"
+import { ReadTable, TableReader } from "../Tools/TableReader";
 
-import { ReadTable, TableReader } from "./TableReader";
 
 export class SoundTableData
 {

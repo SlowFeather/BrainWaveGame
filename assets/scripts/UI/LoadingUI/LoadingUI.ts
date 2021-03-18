@@ -1,13 +1,15 @@
 import { UIDef } from "../../Def/UIDef";
 import Game from "../../Game";
 import SoundManager from "../../Manager/SoundManager";
-import { SoundTableData } from "../../StaticDatas/SoundTableData";
-import { PreLoadCsvSync } from "../../StaticDatas/TableReader";
+
+
 import ResUtil from "../../Tools/ResUtil";
 import { TimeUtil } from "../../Tools/TimeUtil";
 import UIUtil from "../../Tools/UIUtil";
+import { SoundTableData } from "../../StaticDatas/SoundTableData";
+import { PreLoadCsvSync } from "../../Tools/TableReader";
 
-const {ccclass, property} = cc._decorator;
+const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class LoadingUI extends cc.Component {
@@ -38,7 +40,7 @@ export default class LoadingUI extends cc.Component {
     loadbar_txt: cc.Label = null;
 
 
-    
+
     /**
      * 进度条进度
      *
@@ -52,48 +54,54 @@ export default class LoadingUI extends cc.Component {
      * @memberof LoadingUI
      */
     _processingTweenValue = 0;
-    
 
-    start () {
+
+    start() {
         this.LoadAssets();
     }
-    async LoadAssets(){
+    async LoadAssets() {
         this._processingValue = 0;
         //先加载表
-        await this.LoadTable();
-        await this.LoadRes();
+        this.LoadTable();
+        this.LoadRes();
     }
-    async LoadRes(){
+    async LoadRes() {
         //加载所有UIPrefabs
-        await ResUtil.LoadDir("prefabs/ui",(assets)=>{
-            console.log(assets);
+        await ResUtil.LoadDir("prefabs/ui", (assets) => {
+            // console.log(assets);
             assets.forEach(element => {
                 //console.log(element.name);
-                ResUtil.ResDictionary[element.name]=element;
+                ResUtil.ResDictionary[element.name] = element;
                 //cc.instantiate(element);
             });
-            this._processingValue+=10;
-            console.log("-->所有UIPrefabs加载完毕,共有"+assets.length+"个");
+            this._processingValue += 10;
+            console.log("-->所有UIPrefabs加载完毕,共有" + assets.length + "个");
         });
-        
+
         //加载所有GamePrefabs
-        await ResUtil.LoadDir("prefabs/game",(assets)=>{
+        await ResUtil.LoadDir("prefabs/game", (assets) => {
             assets.forEach(element => {
-                ResUtil.ResDictionary[element.name]=element;
+                ResUtil.ResDictionary[element.name] = element;
             });
-            this._processingValue+=10;
-            console.log("-->所有GamePrefabs加载完毕,共有"+assets.length+"个");
+            this._processingValue += 10;
+            console.log("-->所有GamePrefabs加载完毕,共有" + assets.length + "个");
 
         });
 
     }
     //表占80%
-    async LoadTable(){
-        let tables = this.getFilesByPath('staticdatas/', cc.TextAsset);
+    async LoadTable() {
+        let tables = this.getFilesByPath('StaticDatas/', cc.TextAsset);
         let tableCount = tables.length;
         for (let i = 0; i < tableCount; i++) {
             await PreLoadCsvSync(tables[i], (ret) => {
-                this._processingValue += (1 / tableCount) * 80;
+                if (ret) {
+                    this._processingValue += (1 / tableCount) * 80;
+                } else {
+                    console.log("Load Table Error!");
+
+                }
+
                 // this._processingValue += (1 / tableCount) * 100/tableCount;
             });
         }
@@ -112,10 +120,14 @@ export default class LoadingUI extends cc.Component {
         //显示开始界面
         // console.log(SoundTableData.getById(1));
 
-        UIUtil.ShowUI(UIDef.StartUI,()=>{
+        // console.log(SoundTableData.getById(1).path);
+        // let asset = cc.loader.getRes("StaticDatas/DescribeTableData", cc.TextAsset);
+        // console.dir(asset);
+
+        UIUtil.ShowUI(UIDef.StartUI, () => {
             UIUtil.RemoveUI(UIDef.LoadingUI);
         });
-        
+
         // this.InitData();
     }
     update(dt) {

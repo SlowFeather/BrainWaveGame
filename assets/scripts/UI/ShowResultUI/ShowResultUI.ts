@@ -1,6 +1,7 @@
 import { StorageDef } from "../../Def/StorageDef";
 import { UIDef } from "../../Def/UIDef";
 import DriveManager from "../../Manager/DriveManager/DriveManager";
+import SoundManager from "../../Manager/SoundManager";
 import UserManager from "../../Manager/UserManager/UserManager";
 import StorageUtil from "../../Tools/StorageUtil";
 import UIUtil from "../../Tools/UIUtil";
@@ -14,7 +15,7 @@ export default class ShowResultUI extends cc.Component {
     @property([cc.Node])
     allTrophy: cc.Node[] = [];
 
-    @property([cc.Label])
+    @property(cc.Label)
     jihuoLab:cc.Label;
 
     onLoad(){
@@ -26,6 +27,7 @@ export default class ShowResultUI extends cc.Component {
     onEnable(){
 
         console.log("-->进入结果页面");
+
         //再次确认关闭http
         DriveManager.Instance.StopPingDrive();
 
@@ -54,10 +56,13 @@ export default class ShowResultUI extends cc.Component {
         
     }
     OnShowResultBtnClick(){
+        SoundManager.playEffect(2);
 
 // parent.closeIFrame();
     }
     OnReStartBtnClick(){  
+        SoundManager.playEffect(2);
+
         UIUtil.ShowUI(UIDef.StartUI,()=>{
             UIUtil.HideUI(UIDef.ShowResultUI);
         });

@@ -1,5 +1,6 @@
 import { MessageDef } from "../../Def/MessageDef";
 import MessageDispatcher from "../../Manager/MessageDispatcher/MessageDispatcher";
+import SoundManager from "../../Manager/SoundManager";
 
 const {ccclass, property} = cc._decorator;
 
@@ -123,7 +124,12 @@ export default class ConstellationScript extends cc.Component {
         // this.currentAnimationNumber++;
         
         this.playing=true;
+        SoundManager.playEffect(3);
 
+        if (this.allAnimation[this.currentAnimationNumber]==null) {
+            return;
+        }
+        
         this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Start");
         this.allAnimation[this.currentAnimationNumber].on('finished',this.OnFinished,this);
         this.allAnimation[this.currentAnimationNumber].node.active=true;

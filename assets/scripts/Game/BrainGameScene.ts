@@ -5,6 +5,7 @@ import {
     BrainModel
 } from "../Manager/DriveManager/DriveManager";
 import MessageDispatcher from "../Manager/MessageDispatcher/MessageDispatcher";
+import SoundManager from "../Manager/SoundManager";
 import UserManager from "../Manager/UserManager/UserManager";
 import ResUtil from "../Tools/ResUtil";
 import ConstellationScript from "./Constellation/ConstellationScript";
@@ -125,14 +126,14 @@ export default class BrainGameScene extends cc.Component {
     valueSumList: number[] = [0, 0]
 
     /**
-     * 拿到一次数据
+     * 拿到一次数据，这里要判断值
      *
      * @param {BrainModel} module
      * @memberof BrainGameScene
      */
     BrainValueChangeMessageHandler(module: BrainModel) {
 
-        console.log("--> " + this.valueSumList[0] + "--" + this.valueSumList[1]);
+        // console.log("--> " + this.valueSumList[0] + "--" + this.valueSumList[1]);
 
         if (this.valueSumList[0] == 0) {
             this.valueSumList[0] = Number(module.brain[0].Relaxation);
@@ -161,15 +162,9 @@ export default class BrainGameScene extends cc.Component {
                     this.valueSumList.forEach(element => {
                         element = 0;
                     });
-
-
                 }
-
             }
-
-
         }
-
     }
     BrainGameStartHandler() {
         console.log("开始创建地形");
@@ -250,10 +245,11 @@ export default class BrainGameScene extends cc.Component {
         this.SwitchAnimationPlaying = true;
         //这里等1s
         setTimeout(() => {
+            SoundManager.playEffect(4);
+
             this.SceneCamera.getComponent(cc.Animation).play(this.AllAnimationNames[this.NowStarScript.constellationNumber]);
             this.SceneCamera.getComponent(cc.Animation).on("finished", this.SwitchAnimationEnd, this);
         }, 1000);
-
     }
     SwitchAnimationEnd() {
 

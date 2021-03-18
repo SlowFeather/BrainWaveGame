@@ -1,4 +1,4 @@
-struct SoundTableData
+struct DescribeTableData
 {
 	int id; //DescribeId
     string str; //说明

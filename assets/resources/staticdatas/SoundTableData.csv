@@ -1,4 +1,8 @@
-"int","string","string",
-"soundId ","文件路径","说明",
-"id","path","str",
-1,"audio/bgm.mp3","背景音乐"
+int,string,string
+soundId ,文件路径,说明
+id,path,str
+1,"audio/zhubeijing","背景音乐"
+2,"audio/anjianyin","背景音乐"
+3,"audio/xingxingyin","背景音乐"
+4,"audio/xingzuoyin","背景音乐"
+

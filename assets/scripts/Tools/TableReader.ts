@@ -1,5 +1,5 @@
 
-const CSV_DIR = "staticdatas/";
+const CSV_DIR = "StaticDatas/";
 
 async function PreLoadAllCsv() {
     await new Promise(function (resolve, reject) {
