@@ -42,10 +42,10 @@ var CountDown = /** @class */ (function (_super) {
     };
     CountDown.prototype.start = function () {
     };
-    CountDown.prototype.onEnable = function () {
-    };
-    CountDown.prototype.onDisable = function () {
-    };
+    // onEnable(){
+    // }
+    // onDisable(){
+    // }
     /**
      * 开始计时器
      *
@@ -54,7 +54,7 @@ var CountDown = /** @class */ (function (_super) {
     CountDown.prototype.StartCountDown = function (callback) {
         //3分钟
         // this.timeMinute=0;
-        // this.timeSecond=10;
+        // this.timeSecond=50;
         this.timeMinute = 3;
         this.timeSecond = 0;
         this.stoped = false;
@@ -96,6 +96,8 @@ var CountDown = /** @class */ (function (_super) {
         if (this.timer >= 1) {
             this.timer = 0;
             //console.log("过了一秒");
+            // MessageDispatcher.Instance.Dispatch(MessageDef.BrainGetValueMessage);
+            //取一次数据
             this.timeSecond -= 1;
             if (this.timeSecond < 0) {
                 this.timeMinute -= 1;

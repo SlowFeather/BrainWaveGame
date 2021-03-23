@@ -1,13 +1,13 @@
 export class HttpUtil {
 
-    private static UrlHead: string = "http://127.0.0.1:1111/";
+    // private static UrlHead: string = "http://127.0.0.1:1111/";
     /**
      * 延迟多久没回复就放弃
      *
      * @type {number}
      * @memberof DriveManager
      */
-    private static TimeOut:number=100;
+    private static TimeOut:number=200;
 
     /**
      * GET请求
@@ -28,24 +28,28 @@ export class HttpUtil {
             url = url + '?' + dataStr;
         }
         // url = HttpUtil.baseUrl + url;
-
-        let xhr = cc.loader.getXMLHttpRequest();
-        xhr.open("GET", url, true);
-        xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                let response = xhr.responseText;
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    let httpStatus = xhr.statusText;
-                    // callback(true, JSON.parse(response));
-                    callback(true, response);
-                } else {
-                    callback(false, response);
+        try {
+            let xhr = cc.loader.getXMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    let response = xhr.responseText;
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        let httpStatus = xhr.statusText;
+                        // callback(true, JSON.parse(response));
+                        callback(true, response);
+                    } else {
+                        callback(false, response);
+                    }
                 }
-            }
-        };
-        xhr.timeout = this.TimeOut;
-        xhr.send();
+            };
+            xhr.timeout = this.TimeOut;
+            xhr.send();
+        } catch (error) {
+            console.log("Get-->"+error);
+        }
+        
     }
     
     /**
@@ -67,21 +71,25 @@ export class HttpUtil {
         if (dataStr !== '') {
             dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
         }
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                let response = xhr.responseText;
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    let httpStatus = xhr.statusText;
-                    // callback(true, JSON.parse(response));
-                    callback(true, response);
-
-                } else {
-                    callback(false, response);
+        try {
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    let response = xhr.responseText;
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        let httpStatus = xhr.statusText;
+                        // callback(true, JSON.parse(response));
+                        callback(true, response);
+                    } else {
+                        callback(false, response);
+                    }
                 }
-            }
-        };
-        xhr.send(dataStr);
+            };
+            xhr.send(dataStr);
+        } catch (error) {
+            console.log("Post-->"+error);
+        }
+        
     }
 }

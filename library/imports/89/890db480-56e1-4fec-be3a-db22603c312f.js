@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var StorageDef;
 (function (StorageDef) {
     StorageDef["StarLight"] = "StarLight";
+    StorageDef["Token"] = "LOGIN_KEY";
 })(StorageDef = exports.StorageDef || (exports.StorageDef = {}));
 
 cc._RF.pop();

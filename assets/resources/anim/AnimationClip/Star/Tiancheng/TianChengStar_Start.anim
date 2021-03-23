@@ -3,7 +3,7 @@
   "_name": "TianChengStar_Start",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 3,
+  "_duration": 1.95,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -18,7 +18,7 @@
               "value": 0
             },
             {
-              "frame": 2.9833333333333334,
+              "frame": 1.9333333333333333,
               "value": 1
             }
           ],
@@ -28,11 +28,11 @@
               "value": true
             },
             {
-              "frame": 2.9833333333333334,
+              "frame": 1.9333333333333333,
               "value": true
             },
             {
-              "frame": 3,
+              "frame": 1.95,
               "value": false
             }
           ]
@@ -81,7 +81,7 @@
               }
             },
             {
-              "frame": 3,
+              "frame": 1.95,
               "value": {
                 "__type__": "cc.Vec2",
                 "x": 1,
@@ -110,7 +110,7 @@
               "value": false
             },
             {
-              "frame": 3,
+              "frame": 1.95,
               "value": true
             }
           ]

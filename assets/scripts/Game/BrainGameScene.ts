@@ -90,7 +90,6 @@ export default class BrainGameScene extends cc.Component {
 
 
     start() {
-        // this.baiyang.armature().addEventListener(dragonBones.EventObject.COMPLETE,this.AnimationEventHandler,this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     }
     onKeyDown(event) {
@@ -107,24 +106,24 @@ export default class BrainGameScene extends cc.Component {
         }
     }
 
-
     BrainBlockMessageHandler() {
                     //清空两个数字
-                    for (let index = 0; index < this.valueSumList.length; index++) {
-                        this.valueSumList[index]=0;
-                    }
+                    // for (let index = 0; index < this.valueSumList.length; index++) {
+                    //     this.valueSumList[index]=0;
+                    // }
     }
     BrainNotConnectMessageHandler() {
                     //清空两个数字
-                    for (let index = 0; index < this.valueSumList.length; index++) {
-                        this.valueSumList[index]=0;
-                    }
+                    // for (let index = 0; index < this.valueSumList.length; index++) {
+                    //     this.valueSumList[index]=0;
+                    // }
     }
 
     // value1:number=0;
     // value2:number=0;
     valueSumList: number[] = [0, 0]
 
+    // valueCount=0;
     /**
      * 拿到一次数据，这里要判断值
      *
@@ -133,26 +132,43 @@ export default class BrainGameScene extends cc.Component {
      */
     BrainValueChangeMessageHandler(module: BrainModel) {
 
-        // console.log("--> " + this.valueSumList[0] + "--" + this.valueSumList[1]);
-
+        // if (this.NowStarScript.playing) {
+        //     return;
+        // }
+        // if (this.SwitchAnimationPlaying) {
+        //     return;
+        // }
+        // this.valueCount++;
+        // console.log(this.valueCount);
+        
         if (this.valueSumList[0] == 0) {
-            this.valueSumList[0] = Number(module.brain[0].Relaxation);
+            this.valueSumList[0] = Number(module.brain[0].Concentration);
             this.valueSumList[1] = 0;
+            //console.log("-1-> " + this.valueSumList[0] + "--" + this.valueSumList[1]);
             return;
+
         } else {
             if (this.valueSumList[1] == 0) {
-                this.valueSumList[1] = Number(module.brain[0].Relaxation);
+                this.valueSumList[1] = Number(module.brain[0].Concentration);
                 //判断值有没有超过阈值，然后调用
                 // if (Number(module.brain[0].Relaxation)>=this.RelaxationValue) {
                 //     this.NowStarScript.PlayNextStar();
                 // }
                 if (((this.valueSumList[0] + this.valueSumList[1]) / 2) >= this.RelaxationValue) {
+                    //console.log("-2-> " + this.valueSumList[0] + "--" + this.valueSumList[1]);
+
                     //清空两个数字
                     for (let index = 0; index < this.valueSumList.length; index++) {
                         this.valueSumList[index]=0;
                     }
 
-                    this.NowStarScript.PlayNextStar();
+                    if (this.NowStarScript!=null) {
+                        //console.log("开始播放下一个星星动画");
+                        //旧版逻辑
+                        this.NowStarScript.PlayNextStar();
+
+                    }
+                    
 
                 } else {
                     //清空两个数字
@@ -166,8 +182,10 @@ export default class BrainGameScene extends cc.Component {
             }
         }
     }
+
     BrainGameStartHandler() {
         console.log("开始创建地形");
+        // this.valueCount=0;
         this.SceneCamera.position = new cc.Vec3(334.282, 174.654);
 
         this.SwitchAnimationPlaying = false;
@@ -185,21 +203,14 @@ export default class BrainGameScene extends cc.Component {
                 element.InitAllAnimation();
                 if (element.constellationNumber == 0) {
                     this.NowStarScript = element;
-                    //从第一颗星星开始播放动画
-                    //this.StartStarAnimation();
-                    //return;
-
                 }
-
             });
-            // this.AllStarScript[0]
         });
     }
 
     BrainGameEndHandler() {
         this.BackgroundObject.destroy();
         this.SwitchAnimationPlaying = false;
-
     }
 
     /**
@@ -210,29 +221,16 @@ export default class BrainGameScene extends cc.Component {
      * @memberof BrainGameScene
      */
     ConstellationAnimationEndHandler(num: number) {
+
         if (num + 1 >= 5) {
             console.log("超过最大星座限制");
             return;
         } else {
             //当前星座+1
-            UserManager.Instance.CurrentConstellationNumber += 1;
 
             //切换到下一个，然后播放动画
             this.SwitchNextAnimation(num + 1);
         }
-    }
-
-    /**
-     * 让当前星座开始播放动画
-     *
-     * @memberof BrainGameScene
-     */
-    StartStarAnimation() {
-        if (this.NowStarScript == null) {
-            console.log("当前星座丢失");
-            return;
-        }
-        this.NowStarScript.StartAnimation();
     }
 
     /**
@@ -243,18 +241,15 @@ export default class BrainGameScene extends cc.Component {
      */
     SwitchNextAnimation(nextnumber: number) {
         this.SwitchAnimationPlaying = true;
-        //这里等1s
-        setTimeout(() => {
-            SoundManager.playEffect(4);
+        SoundManager.playEffect(4);
 
-            this.SceneCamera.getComponent(cc.Animation).play(this.AllAnimationNames[this.NowStarScript.constellationNumber]);
-            this.SceneCamera.getComponent(cc.Animation).on("finished", this.SwitchAnimationEnd, this);
-        }, 1000);
+        this.SceneCamera.getComponent(cc.Animation).play(this.AllAnimationNames[this.NowStarScript.constellationNumber]);
+        this.SceneCamera.getComponent(cc.Animation).on("finished", this.SwitchAnimationEnd, this);
     }
     SwitchAnimationEnd() {
 
         this.SceneCamera.getComponent(cc.Animation).off("finished", this.SwitchAnimationEnd, this);
-        console.log("切换动画结束" + this.NowStarScript.constellationNumber + 1);
+        console.log("切换动画结束" +(Number(this.NowStarScript.constellationNumber)  + 1));
 
         this.NowStarScript = this.AllStarScript[this.NowStarScript.constellationNumber + 1];
         this.SwitchAnimationPlaying = false;
@@ -262,5 +257,4 @@ export default class BrainGameScene extends cc.Component {
         //自动播放第一个
         // this.StartStarAnimation();
     }
-    // update (dt) {}
 }

@@ -1,9 +1,9 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "CameraJinniuToXiaoxiong",
+  "_name": "CameraJuxieToXiaoxiong",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 3,
+  "_duration": 1.9166666666666667,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -16,15 +16,15 @@
             "value": 2
           },
           {
-            "frame": 1,
+            "frame": 0.5,
             "value": 1
           },
           {
-            "frame": 2,
+            "frame": 1.5,
             "value": 1
           },
           {
-            "frame": 3,
+            "frame": 1.9166666666666667,
             "value": 2
           }
         ]
@@ -33,7 +33,7 @@
     "props": {
       "position": [
         {
-          "frame": 1,
+          "frame": 0.5,
           "value": [
             428,
             656,
@@ -41,7 +41,7 @@
           ]
         },
         {
-          "frame": 2,
+          "frame": 1.5,
           "value": [
             748,
             1059,

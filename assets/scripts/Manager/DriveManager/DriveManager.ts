@@ -16,15 +16,12 @@ export default class DriveManager extends cc.Component {
 //#endregion
 
 
-
-
     // host:string="http://127.0.0.1:8090"; 
     // param:any={"ty":"brain"};
 
     
     host:string="http://127.0.0.1:1111/hello.php";
     param:any={"id":"yingxiangshijie"};
-
 
 
     /**
@@ -78,9 +75,14 @@ export default class DriveManager extends cc.Component {
     OnBrainNotConnectEvent:Function=null;
 
 
+
     start () {
         //this.PinHost();
+        //MessageDispatcher.Instance.AddEventListener(MessageDef.BrainGetValueMessage,this.BrainGetValueMessageHandler,this);
     }
+    // BrainGetValueMessageHandler(){
+    //     this.PinHost();
+    // }
 
     GetHandler(b:boolean,response:string){
         
@@ -190,3 +192,4 @@ export class Brain {
     brain: Brain[];
   }
   
+

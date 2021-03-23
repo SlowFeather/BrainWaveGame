@@ -26,6 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var MessageDef_1 = require("../../Def/MessageDef");
 var MessageDispatcher_1 = require("../../Manager/MessageDispatcher/MessageDispatcher");
 var SoundManager_1 = require("../../Manager/SoundManager");
+var UserManager_1 = require("../../Manager/UserManager/UserManager");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ConstellationScript = /** @class */ (function (_super) {
     __extends(ConstellationScript, _super);
@@ -62,6 +63,18 @@ var ConstellationScript = /** @class */ (function (_super) {
         // this.constellationArmatureDisplay.armature().addEventListener(dragonBones.EventObject.FADE_IN_COMPLETE,this.AnimationEventHandler,this);
         // this.constellationArmatureDisplay.armature().addEventListener(dragonBones.EventObject.FADE_OUT_COMPLETE,this.AnimationEventHandler,this);
     };
+    //============================================================================================
+    // NewPlayStar(){
+    //     this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Start");
+    //     this.allAnimation[this.currentAnimationNumber].node.active=true;
+    //     this.currentAnimationNumber++;
+    //     this.allAnimation[this.currentAnimationNumber].once('finished',()=>{
+    //         if (this.allAnimation[this.currentAnimationNumber].currentClip.name=="TianChengStar_Start") {
+    //             this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Idle");
+    //         }
+    //     },this);
+    // }
+    //===========================================================================================
     /**
      * 初始化所有动画，相当于把所有子物体透明度都变成0
      *
@@ -78,35 +91,32 @@ var ConstellationScript = /** @class */ (function (_super) {
      *
      * @memberof ConstellationScript
      */
-    ConstellationScript.prototype.StartAnimation = function () {
-        //this.constellationArmatureDisplay.playAnimation("xingxing"+this.currentAnimationNumber,1);
-        this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Start");
-        this.allAnimation[this.currentAnimationNumber].node.active = true;
-        this.allAnimation[this.currentAnimationNumber].on('finished', this.OnFinished, this);
-    };
+    // StartAnimation(){
+    //     this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Start");
+    //     this.allAnimation[this.currentAnimationNumber].node.active=true;
+    //     this.allAnimation[this.currentAnimationNumber].on('finished',this.OnFinished,this);
+    // }
     ConstellationScript.prototype.OnFinished = function () {
-        console.log("播完了" + this.allAnimation[this.currentAnimationNumber].currentClip.name);
+        //console.log("播完了"+this.allAnimation[this.currentAnimationNumber].currentClip.name);
         this.playing = false;
         //先取消 监听
         this.allAnimation[this.currentAnimationNumber].off('finished', this.OnFinished, this);
         if (this.allAnimation[this.currentAnimationNumber].currentClip.name == "TianChengStar_Start") {
             this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Idle");
             this.currentAnimationNumber++;
-            //this.PlayNextStar();
-            //检查是不是最后一个，如果是则发消息
-            if (this.currentAnimationNumber >= this.allAnimation.length) {
-                console.log("当前星座所有动画播放完毕");
-                MessageDispatcher_1.default.Instance.Dispatch(MessageDef_1.MessageDef.ConstellationAnimationEnd, this.constellationNumber);
-                return;
-            }
             return;
         }
-        // if (this.allAnimation[this.currentAnimationNumber].currentClip.name=="TianChengStar_Idle") {
-        // }
     };
     ConstellationScript.prototype.PlayNextStar = function () {
         if (this.playing) {
-            console.log("当前正在播放动画");
+            console.error("当前正在播放动画");
+            return;
+        }
+        //检查是不是最后一个，如果是则发消息
+        if (this.currentAnimationNumber >= this.allAnimation.length) {
+            //console.log("当前星座所有动画播放完毕,增加星座计数");
+            UserManager_1.default.Instance.CurrentConstellationNumber += 1;
+            MessageDispatcher_1.default.Instance.Dispatch(MessageDef_1.MessageDef.ConstellationAnimationEnd, this.constellationNumber);
             return;
         }
         //如果是第一种动画
@@ -120,6 +130,10 @@ var ConstellationScript = /** @class */ (function (_super) {
         // this.currentAnimationNumber++;
         this.playing = true;
         SoundManager_1.default.playEffect(3);
+        UserManager_1.default.Instance.CurrentStarNumber += 1;
+        if (this.allAnimation == null) {
+            return;
+        }
         if (this.allAnimation[this.currentAnimationNumber] == null) {
             return;
         }

@@ -18,6 +18,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var StorageDef;
 (function (StorageDef) {
     StorageDef["StarLight"] = "StarLight";
+    StorageDef["Token"] = "LOGIN_KEY";
 })(StorageDef = exports.StorageDef || (exports.StorageDef = {}));
 
 cc._RF.pop();
@@ -31,4 +32,4 @@ cc._RF.pop();
                         });
                     }
                 })();
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFzc2V0c1xcc2NyaXB0c1xcRGVmXFxTdG9yYWdlRGVmLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsSUFBWSxVQUlYO0FBSkQsV0FBWSxVQUFVO0lBQ2xCLHFDQUF1QixDQUFBO0FBRzNCLENBQUMsRUFKVyxVQUFVLEdBQVYsa0JBQVUsS0FBVixrQkFBVSxRQUlyQiIsImZpbGUiOiIiLCJzb3VyY2VSb290IjoiLyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBlbnVtIFN0b3JhZ2VEZWYge1xuICAgIFN0YXJMaWdodCA9IFwiU3RhckxpZ2h0XCIsXG5cblxufSJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFzc2V0c1xcc2NyaXB0c1xcRGVmXFxTdG9yYWdlRGVmLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsSUFBWSxVQUlYO0FBSkQsV0FBWSxVQUFVO0lBQ2xCLHFDQUF1QixDQUFBO0lBQ3ZCLGlDQUFpQixDQUFBO0FBRXJCLENBQUMsRUFKVyxVQUFVLEdBQVYsa0JBQVUsS0FBVixrQkFBVSxRQUlyQiIsImZpbGUiOiIiLCJzb3VyY2VSb290IjoiLyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBlbnVtIFN0b3JhZ2VEZWYge1xuICAgIFN0YXJMaWdodCA9IFwiU3RhckxpZ2h0XCIsXG4gICAgVG9rZW49XCJMT0dJTl9LRVlcIixcblxufSJdfQ==

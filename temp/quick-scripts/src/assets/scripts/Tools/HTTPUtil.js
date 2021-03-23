@@ -27,24 +27,29 @@ var HttpUtil = /** @class */ (function () {
             url = url + '?' + dataStr;
         }
         // url = HttpUtil.baseUrl + url;
-        var xhr = cc.loader.getXMLHttpRequest();
-        xhr.open("GET", url, true);
-        xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                var response = xhr.responseText;
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    var httpStatus = xhr.statusText;
-                    // callback(true, JSON.parse(response));
-                    callback(true, response);
+        try {
+            var xhr_1 = cc.loader.getXMLHttpRequest();
+            xhr_1.open("GET", url, true);
+            xhr_1.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+            xhr_1.onreadystatechange = function () {
+                if (xhr_1.readyState === 4) {
+                    var response = xhr_1.responseText;
+                    if (xhr_1.status >= 200 && xhr_1.status < 300) {
+                        var httpStatus = xhr_1.statusText;
+                        // callback(true, JSON.parse(response));
+                        callback(true, response);
+                    }
+                    else {
+                        callback(false, response);
+                    }
                 }
-                else {
-                    callback(false, response);
-                }
-            }
-        };
-        xhr.timeout = this.TimeOut;
-        xhr.send();
+            };
+            xhr_1.timeout = this.TimeOut;
+            xhr_1.send();
+        }
+        catch (error) {
+            console.log("Get-->" + error);
+        }
     };
     /**
      * POST请求
@@ -66,31 +71,36 @@ var HttpUtil = /** @class */ (function () {
         if (dataStr !== '') {
             dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
         }
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                var response = xhr.responseText;
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    var httpStatus = xhr.statusText;
-                    // callback(true, JSON.parse(response));
-                    callback(true, response);
+        try {
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    var response = xhr.responseText;
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        var httpStatus = xhr.statusText;
+                        // callback(true, JSON.parse(response));
+                        callback(true, response);
+                    }
+                    else {
+                        callback(false, response);
+                    }
                 }
-                else {
-                    callback(false, response);
-                }
-            }
-        };
-        xhr.send(dataStr);
+            };
+            xhr.send(dataStr);
+        }
+        catch (error) {
+            console.log("Post-->" + error);
+        }
     };
-    HttpUtil.UrlHead = "http://127.0.0.1:1111/";
+    // private static UrlHead: string = "http://127.0.0.1:1111/";
     /**
      * 延迟多久没回复就放弃
      *
      * @type {number}
      * @memberof DriveManager
      */
-    HttpUtil.TimeOut = 100;
+    HttpUtil.TimeOut = 200;
     return HttpUtil;
 }());
 exports.HttpUtil = HttpUtil;

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wanxiangxingkong",
+    "texture": "4b230dce-9fed-42cd-8666-a7e89f62b621",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      999,
+      243
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      999,
+      243
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

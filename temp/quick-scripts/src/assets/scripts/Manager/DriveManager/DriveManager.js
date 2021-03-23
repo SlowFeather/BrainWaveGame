@@ -88,7 +88,11 @@ var DriveManager = /** @class */ (function (_super) {
     };
     DriveManager.prototype.start = function () {
         //this.PinHost();
+        //MessageDispatcher.Instance.AddEventListener(MessageDef.BrainGetValueMessage,this.BrainGetValueMessageHandler,this);
     };
+    // BrainGetValueMessageHandler(){
+    //     this.PinHost();
+    // }
     DriveManager.prototype.GetHandler = function (b, response) {
         if (b) {
             if (!this.connected) {

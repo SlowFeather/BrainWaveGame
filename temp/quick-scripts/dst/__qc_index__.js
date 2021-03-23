@@ -44,6 +44,7 @@ require('./assets/scripts/UI/GameUI/RadarChart');
 require('./assets/scripts/UI/GameUI/RadarChartBz');
 require('./assets/scripts/UI/LoadingUI/LoadingRotation');
 require('./assets/scripts/UI/LoadingUI/LoadingUI');
+require('./assets/scripts/UI/ProcessingUI/ProcessingUI');
 require('./assets/scripts/UI/ShowResultUI/ShowResultUI');
 require('./assets/scripts/UI/StartUI/StartUI');
 

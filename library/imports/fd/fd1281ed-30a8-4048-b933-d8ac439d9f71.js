@@ -47,6 +47,10 @@ var MessageDef;
      * BrainModule
      */
     MessageDef["BrainValueChangeMessage"] = "BrainValueChangeMessage";
+    /**
+     * Test 让脑机获取数据
+     */
+    MessageDef["BrainGetValueMessage"] = "BrainGetValueMessage";
 })(MessageDef = exports.MessageDef || (exports.MessageDef = {}));
 
 cc._RF.pop();

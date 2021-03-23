@@ -33,6 +33,10 @@ var UIDef;
      * 显示结果界面
      */
     UIDef["ShowResultUI"] = "ShowResultUI";
+    /**
+     * 显示结果等待界面
+     */
+    UIDef["ProcessingUI"] = "ProcessingUI";
 })(UIDef = exports.UIDef || (exports.UIDef = {}));
 
 cc._RF.pop();

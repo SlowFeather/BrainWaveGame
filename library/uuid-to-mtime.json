@@ -65,12 +65,12 @@
     "relativePath": "resources\\materials"
   },
   "88245d03-32a6-4da4-91cb-bfe84e552c1e": {
-    "asset": 1615982774732,
+    "asset": 1616399438964,
     "meta": 1615835590000,
     "relativePath": "resources"
   },
   "7a2d4530-85b7-49c1-bbb8-4c23c67fc282": {
-    "asset": 1615965614582,
+    "asset": 1616231634742,
     "meta": 1615835590000,
     "relativePath": "resources\\anim"
   },
@@ -95,23 +95,23 @@
     "relativePath": "resources\\anim\\AnimationClip\\Camera"
   },
   "6974a08f-ba39-44de-a882-e61b14a8375c": {
-    "asset": 1615835590000,
-    "meta": 1615965648976,
+    "asset": 1616207828212,
+    "meta": 1616207828229,
     "relativePath": "resources\\anim\\AnimationClip\\Camera\\CameraBaiyangToJinniu.anim"
   },
   "d05f9998-b0f9-4118-9762-fbaaabe70a08": {
-    "asset": 1615835590000,
-    "meta": 1615965648979,
+    "asset": 1616207886623,
+    "meta": 1616207886640,
     "relativePath": "resources\\anim\\AnimationClip\\Camera\\CameraJinniuToJuxie.anim"
   },
   "fc929772-2e1c-4bf2-9d3d-414a3e25d3a9": {
-    "asset": 1615835590000,
-    "meta": 1615965648986,
+    "asset": 1616207917512,
+    "meta": 1616207917527,
     "relativePath": "resources\\anim\\AnimationClip\\Camera\\CameraJuxieToXiaoxiong.anim"
   },
   "2cdf8e40-ddce-4943-8a98-30fdc7be744c": {
-    "asset": 1615835590000,
-    "meta": 1615965648988,
+    "asset": 1616204653618,
+    "meta": 1616204653639,
     "relativePath": "resources\\anim\\AnimationClip\\Camera\\CameraTianchengToBaiyang.anim"
   },
   "c9ba7348-8023-4cb5-ba2a-49a4123fd27e": {
@@ -135,8 +135,8 @@
     "relativePath": "resources\\anim\\AnimationClip\\Star\\Tiancheng\\TianChengStar_Idle.anim"
   },
   "38b52308-802a-4e82-b1d3-8fdc5152a9d6": {
-    "asset": 1615835590000,
-    "meta": 1615965648995,
+    "asset": 1616397844116,
+    "meta": 1616397844134,
     "relativePath": "resources\\anim\\AnimationClip\\Star\\Tiancheng\\TianChengStar_Start.anim"
   },
   "b77945e0-ab7f-4d88-8cbb-92212d755949": {
@@ -265,7 +265,7 @@
     "relativePath": "resources\\anim\\xiakedou\\xiakedou_ske.json"
   },
   "1dd2978c-0d27-4a63-bbf2-3bfa00f44cfe": {
-    "asset": 1615984097730,
+    "asset": 1616141315120,
     "meta": 1615835590000,
     "relativePath": "resources\\audio"
   },
@@ -310,7 +310,7 @@
     "relativePath": "resources\\anim\\xiakedou\\xiakedou_tex.json"
   },
   "26575ba8-94e1-42f2-a391-e7dd6048e1b0": {
-    "asset": 1615965614687,
+    "asset": 1616407473130,
     "meta": 1615835590000,
     "relativePath": "resources\\img\\DescribeUI"
   },
@@ -630,7 +630,7 @@
     "relativePath": "resources\\img\\ResultUI\\xingzuobackground.png"
   },
   "3cb517d9-0795-4404-bd38-8482e4a4a9d0": {
-    "asset": 1615981688446,
+    "asset": 1616401551754,
     "meta": 1615835590000,
     "relativePath": "resources\\img\\StartUI"
   },
@@ -710,8 +710,8 @@
     "relativePath": "resources\\prefabs\\JinNiu.prefab"
   },
   "3cb2cf0c-f459-42ae-832f-5dba0c61e8b7": {
-    "asset": 1615835590000,
-    "meta": 1615965650277,
+    "asset": 1616235120240,
+    "meta": 1616235120283,
     "relativePath": "resources\\prefabs\\game\\Background.prefab"
   },
   "21aa0059-6a3f-4c47-9134-a3e8a29ba539": {
@@ -730,7 +730,7 @@
     "relativePath": "resources\\prefabs\\particle\\StartParticle.prefab"
   },
   "9d3117f5-f2fc-4d98-a027-dfcf26261fc1": {
-    "asset": 1615965615302,
+    "asset": 1616136329807,
     "meta": 1615835590000,
     "relativePath": "resources\\prefabs\\ui"
   },
@@ -750,8 +750,8 @@
     "relativePath": "resources\\prefabs\\ui\\DisConnectUI"
   },
   "65df6040-66d8-4098-ba19-473704a1c960": {
-    "asset": 1615985288523,
-    "meta": 1615985288542,
+    "asset": 1616460732403,
+    "meta": 1616460732427,
     "relativePath": "resources\\prefabs\\ui\\DescribeUI\\DescribeUI.prefab"
   },
   "c1882dbe-b2f4-46bd-bc26-85ea1492e18c": {
@@ -775,8 +775,8 @@
     "relativePath": "resources\\particles\\startparticle.plist"
   },
   "403dcdce-031c-4510-8b53-660d743846f0": {
-    "asset": 1615985727407,
-    "meta": 1615985727430,
+    "asset": 1616052530819,
+    "meta": 1616052530862,
     "relativePath": "resources\\prefabs\\ui\\GameUI\\GameUI.prefab"
   },
   "f79495ae-2565-4e44-bb95-557f59dc6493": {
@@ -785,8 +785,8 @@
     "relativePath": "resources\\prefabs\\ui\\StartUI"
   },
   "01d53f11-c8a0-4a54-9791-1f5678b52191": {
-    "asset": 1615981778434,
-    "meta": 1615981778456,
+    "asset": 1616400106880,
+    "meta": 1616400106909,
     "relativePath": "resources\\prefabs\\ui\\ShowResultUI\\ShowResultUI.prefab"
   },
   "d90f3972-965e-4f31-bf98-e5ea2a0eb6bc": {
@@ -795,8 +795,8 @@
     "relativePath": "resources\\prefabs\\ui\\TestUI"
   },
   "b3ac9cf5-8d58-4877-bd85-cc00ab9145f0": {
-    "asset": 1615981744091,
-    "meta": 1615981744113,
+    "asset": 1616401577093,
+    "meta": 1616401577115,
     "relativePath": "resources\\prefabs\\ui\\StartUI\\StartUI.prefab"
   },
   "278f7ac5-32c6-40c7-aff8-1db47f48eaf2": {
@@ -844,21 +844,6 @@
     "meta": 1615835590000,
     "relativePath": "scripts\\Def"
   },
-  "fd1281ed-30a8-4048-b933-d8ac439d9f71": {
-    "asset": 1615835590000,
-    "meta": 1615965650451,
-    "relativePath": "scripts\\Def\\MessageDef.ts"
-  },
-  "890db480-56e1-4fec-be3a-db22603c312f": {
-    "asset": 1615835590000,
-    "meta": 1615965650464,
-    "relativePath": "scripts\\Def\\StorageDef.ts"
-  },
-  "9b253b1f-ac2a-41b1-b97e-366ae715f580": {
-    "asset": 1615835590000,
-    "meta": 1615965650484,
-    "relativePath": "scripts\\Def\\UIDef.ts"
-  },
   "538e3185-dcb4-4bc4-8903-0f453c00808f": {
     "asset": 1615835590000,
     "meta": 1615965650534,
@@ -885,8 +870,8 @@
     "relativePath": "scripts\\Manager\\DriveManager"
   },
   "490044b2-fe74-427c-ab71-26bfd9247ae2": {
-    "asset": 1615983407930,
-    "meta": 1615983407946,
+    "asset": 1616409424406,
+    "meta": 1616409424423,
     "relativePath": "scene\\Main.fire"
   },
   "2c709c55-549a-415d-9cbd-ec0473b21f0d": {
@@ -903,11 +888,6 @@
     "asset": 1615965615523,
     "meta": 1615835590000,
     "relativePath": "scripts\\Manager\\UserManager"
-  },
-  "4bac769c-fb71-4dfa-bb83-9c8b68423627": {
-    "asset": 1615835590000,
-    "meta": 1615965650833,
-    "relativePath": "scripts\\Manager\\UserManager\\UserManager.ts"
   },
   "af7a7e93-cee2-49ba-955c-8621837f1edc": {
     "asset": 1615972743472,
@@ -938,11 +918,6 @@
     "asset": 1615835590000,
     "meta": 1615965651007,
     "relativePath": "scripts\\Tools\\DataStructure\\List.ts"
-  },
-  "b8defa23-6ce5-42c7-bd11-55f00e6c6434": {
-    "asset": 1615835590000,
-    "meta": 1615965651042,
-    "relativePath": "scripts\\Tools\\HTTPUtil.ts"
   },
   "03012cf6-dab8-4522-9bb7-6980d4a76520": {
     "asset": 1615835590000,
@@ -980,7 +955,7 @@
     "relativePath": "scripts\\Tools\\UIUtil.ts"
   },
   "13d7efa8-0955-4f89-8a29-eec62c4dd8f8": {
-    "asset": 1615965615916,
+    "asset": 1616137193273,
     "meta": 1615835590000,
     "relativePath": "scripts\\UI"
   },
@@ -1003,16 +978,6 @@
     "asset": 1615965615888,
     "meta": 1615835590000,
     "relativePath": "scripts\\UI\\GameUI"
-  },
-  "54341bf6-dcf5-4ec9-918f-c895a43c676d": {
-    "asset": 1615835590000,
-    "meta": 1615965651403,
-    "relativePath": "scripts\\UI\\GameUI\\CountDown.ts"
-  },
-  "c0558064-94e3-4925-b30e-9a5c07d64171": {
-    "asset": 1615835590000,
-    "meta": 1615965651435,
-    "relativePath": "scripts\\UI\\GameUI\\Dashboard.ts"
   },
   "d8353b2e-1fae-455b-af5e-1db88274bd1b": {
     "asset": 1615835590000,
@@ -1519,50 +1484,10 @@
     "meta": 1615984081245,
     "relativePath": "resources\\audio\\zhubeijing.mp3"
   },
-  "ccdb1f8a-2bce-4c18-aca5-e297ec048816": {
-    "asset": 1615984583391,
-    "meta": 1615984584011,
-    "relativePath": "resources\\StaticDatas\\SoundTableData.csv"
-  },
-  "1a1089bf-617c-4a6d-9d90-4c9480381b17": {
-    "asset": 1615985004030,
-    "meta": 1615985034030,
-    "relativePath": "scripts\\UI\\GameUI\\RadarChartBz.ts"
-  },
   "9a8e9a4f-c27d-47dd-8c13-31d443db6cda": {
     "asset": 1615985049459,
     "meta": 1615985050266,
     "relativePath": "scripts\\UI\\StartUI\\StartUI.ts"
-  },
-  "0c21a879-9194-44aa-9582-cc623714abc1": {
-    "asset": 1615985139068,
-    "meta": 1615985190235,
-    "relativePath": "scripts\\UI\\DescribeUI\\DescribeUI.ts"
-  },
-  "8086ce59-db98-4a39-99a8-ed65895ea009": {
-    "asset": 1615985157207,
-    "meta": 1615985190266,
-    "relativePath": "scripts\\UI\\GameUI\\GameUI.ts"
-  },
-  "634b727d-9099-4c8b-a910-de85fc4f97fb": {
-    "asset": 1615985188420,
-    "meta": 1615985190295,
-    "relativePath": "scripts\\UI\\ShowResultUI\\ShowResultUI.ts"
-  },
-  "cf80d562-f9ad-4401-9bc4-2c11d0c65bd4": {
-    "asset": 1615992145156,
-    "meta": 1615992215201,
-    "relativePath": "scripts\\Game\\Constellation\\ConstellationScript.ts"
-  },
-  "f73b4259-7793-43ef-a154-5f785d20740b": {
-    "asset": 1615992318049,
-    "meta": 1615992318986,
-    "relativePath": "scripts\\Game\\BrainGameScene.ts"
-  },
-  "b7d2d515-1bc4-4f1a-8024-d28bfaf2bacf": {
-    "asset": 1616030366583,
-    "meta": 1616030367247,
-    "relativePath": "scripts\\Game.ts"
   },
   "c5c3d2b2-86d1-48c4-92a2-6fd4d9d2eeed": {
     "asset": 1616031029407,
@@ -1579,19 +1504,144 @@
     "meta": 1616031033491,
     "relativePath": "scripts\\UI\\LoadingUI\\LoadingUI.ts"
   },
-  "bd3c903d-0bb8-4d03-b7f4-541a0bc00744": {
-    "asset": 1616031022622,
-    "meta": 1616031033549,
-    "relativePath": "scripts\\Tools\\TableReader.ts"
-  },
-  "0dfaaa57-2746-407d-8a53-c0983f7ba41b": {
-    "asset": 1616032402898,
-    "meta": 1616032413050,
-    "relativePath": "scripts\\Manager\\DriveManager\\DriveManager.ts"
-  },
   "dd02a87a-8a1c-4c7c-b994-18ba910334f9": {
     "asset": 1616032431657,
     "meta": 1616032852037,
     "relativePath": "scripts\\Manager\\SoundManager.ts"
+  },
+  "890db480-56e1-4fec-be3a-db22603c312f": {
+    "asset": 1616050478330,
+    "meta": 1616050567970,
+    "relativePath": "scripts\\Def\\StorageDef.ts"
+  },
+  "b7d2d515-1bc4-4f1a-8024-d28bfaf2bacf": {
+    "asset": 1616050582342,
+    "meta": 1616051913428,
+    "relativePath": "scripts\\Game.ts"
+  },
+  "1a1089bf-617c-4a6d-9d90-4c9480381b17": {
+    "asset": 1616052006809,
+    "meta": 1616052012861,
+    "relativePath": "scripts\\UI\\GameUI\\RadarChartBz.ts"
+  },
+  "c0558064-94e3-4925-b30e-9a5c07d64171": {
+    "asset": 1616063705576,
+    "meta": 1616064619285,
+    "relativePath": "scripts\\UI\\GameUI\\Dashboard.ts"
+  },
+  "bd3c903d-0bb8-4d03-b7f4-541a0bc00744": {
+    "asset": 1616122391198,
+    "meta": 1616122393616,
+    "relativePath": "scripts\\Tools\\TableReader.ts"
+  },
+  "8086ce59-db98-4a39-99a8-ed65895ea009": {
+    "asset": 1616135437057,
+    "meta": 1616135444841,
+    "relativePath": "scripts\\UI\\GameUI\\GameUI.ts"
+  },
+  "80c4ff83-c918-4dbd-a849-7bf6536a57ad": {
+    "asset": 1616136332633,
+    "meta": 1616136325524,
+    "relativePath": "resources\\prefabs\\ui\\ProcessingUI"
+  },
+  "8c7505ee-0ffe-45ea-853f-fada9156208d": {
+    "asset": 1616137209907,
+    "meta": 1616137209926,
+    "relativePath": "resources\\prefabs\\ui\\ProcessingUI\\ProcessingUI.prefab"
+  },
+  "0643c614-55c2-472d-957d-abb8e669fbed": {
+    "asset": 1616137200773,
+    "meta": 1616137189379,
+    "relativePath": "scripts\\UI\\ProcessingUI"
+  },
+  "9b253b1f-ac2a-41b1-b97e-366ae715f580": {
+    "asset": 1616137513532,
+    "meta": 1616137705260,
+    "relativePath": "scripts\\Def\\UIDef.ts"
+  },
+  "db5d929d-af89-4353-90a3-a5ca69172156": {
+    "asset": 1616137224800,
+    "meta": 1616137705329,
+    "relativePath": "scripts\\UI\\ProcessingUI\\ProcessingUI.ts"
+  },
+  "b8defa23-6ce5-42c7-bd11-55f00e6c6434": {
+    "asset": 1616139471131,
+    "meta": 1616139473572,
+    "relativePath": "scripts\\Tools\\HTTPUtil.ts"
+  },
+  "25f9a54b-a185-4039-b8cf-9ec64060753d": {
+    "asset": 1616141308015,
+    "meta": 1616141315124,
+    "relativePath": "resources\\audio\\anjianyin2.mp3"
+  },
+  "ccdb1f8a-2bce-4c18-aca5-e297ec048816": {
+    "asset": 1616141325083,
+    "meta": 1616141326201,
+    "relativePath": "resources\\StaticDatas\\SoundTableData.csv"
+  },
+  "4bac769c-fb71-4dfa-bb83-9c8b68423627": {
+    "asset": 1616385425244,
+    "meta": 1616385786739,
+    "relativePath": "scripts\\Manager\\UserManager\\UserManager.ts"
+  },
+  "fd1281ed-30a8-4048-b933-d8ac439d9f71": {
+    "asset": 1616394280646,
+    "meta": 1616394428761,
+    "relativePath": "scripts\\Def\\MessageDef.ts"
+  },
+  "0dfaaa57-2746-407d-8a53-c0983f7ba41b": {
+    "asset": 1616398080017,
+    "meta": 1616398122641,
+    "relativePath": "scripts\\Manager\\DriveManager\\DriveManager.ts"
+  },
+  "f73b4259-7793-43ef-a154-5f785d20740b": {
+    "asset": 1616400562562,
+    "meta": 1616400608477,
+    "relativePath": "scripts\\Game\\BrainGameScene.ts"
+  },
+  "cf80d562-f9ad-4401-9bc4-2c11d0c65bd4": {
+    "asset": 1616400564078,
+    "meta": 1616400608512,
+    "relativePath": "scripts\\Game\\Constellation\\ConstellationScript.ts"
+  },
+  "4b230dce-9fed-42cd-8666-a7e89f62b621": {
+    "asset": 1616401542291,
+    "meta": 1616401551772,
+    "relativePath": "resources\\img\\StartUI\\wanxiangxingkong.png"
+  },
+  "634b727d-9099-4c8b-a910-de85fc4f97fb": {
+    "asset": 1616405747247,
+    "meta": 1616405769526,
+    "relativePath": "scripts\\UI\\ShowResultUI\\ShowResultUI.ts"
+  },
+  "2e4cfb2a-e7c3-476a-b7ca-651a892a1fd1": {
+    "asset": 1616407411822,
+    "meta": 1616407473167,
+    "relativePath": "resources\\img\\DescribeUI\\1.png"
+  },
+  "780c36bf-d390-4973-ab69-858cbaf77820": {
+    "asset": 1616407411856,
+    "meta": 1616407473182,
+    "relativePath": "resources\\img\\DescribeUI\\2.png"
+  },
+  "01205d78-a602-4915-b7e0-394b021e9dca": {
+    "asset": 1616407411857,
+    "meta": 1616407473211,
+    "relativePath": "resources\\img\\DescribeUI\\4.png"
+  },
+  "66e1df77-beb3-42ef-ba72-72816d2424af": {
+    "asset": 1616407411857,
+    "meta": 1616407473221,
+    "relativePath": "resources\\img\\DescribeUI\\3.png"
+  },
+  "0c21a879-9194-44aa-9582-cc623714abc1": {
+    "asset": 1616408893988,
+    "meta": 1616408928923,
+    "relativePath": "scripts\\UI\\DescribeUI\\DescribeUI.ts"
+  },
+  "54341bf6-dcf5-4ec9-918f-c895a43c676d": {
+    "asset": 1616463081896,
+    "meta": 1616463082383,
+    "relativePath": "scripts\\UI\\GameUI\\CountDown.ts"
   }
 }

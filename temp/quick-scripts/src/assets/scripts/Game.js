@@ -23,9 +23,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var StorageDef_1 = require("./Def/StorageDef");
 var UIDef_1 = require("./Def/UIDef");
-var StorageUtil_1 = require("./Tools/StorageUtil");
 var UIUtil_1 = require("./Tools/UIUtil");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var Game = /** @class */ (function (_super) {
@@ -41,7 +39,8 @@ var Game = /** @class */ (function (_super) {
     };
     Game.prototype.start = function () {
         // TransformUtil.GetWorldPostation2(this.node);
-        StorageUtil_1.default.storageData(StorageDef_1.StorageDef.StarLight, 3);
+        // StorageUtil.storageData(StorageDef.StarLight,3);
+        // StorageUtil.storageData(StorageDef.Token,"Hello");
         // console.log(StorageUtil.getData("bool",false));
         // StorageUtil.removeData("bool");
         UIUtil_1.default.ShowBaseUI(UIDef_1.UIDef.LoadingUI);

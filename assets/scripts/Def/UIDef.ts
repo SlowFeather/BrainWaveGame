@@ -33,7 +33,12 @@ export enum UIDef {
     /**
      * 显示结果界面
      */
-    ShowResultUI="ShowResultUI"
+    ShowResultUI="ShowResultUI",
+
+    /**
+     * 显示结果等待界面
+     */
+    ProcessingUI="ProcessingUI"
 
 
 }

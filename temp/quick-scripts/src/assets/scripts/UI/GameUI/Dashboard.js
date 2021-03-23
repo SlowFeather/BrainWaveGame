@@ -47,7 +47,7 @@ var Dashboard = /** @class */ (function (_super) {
     // onLoad () {}
     Dashboard.prototype.onEnable = function () {
         this.data = 0;
-        this.pointer.angle = 125;
+        this.pointer.angle = 0;
         this.dataLab.string = this.data.toString();
         MessageDispatcher_1.default.Instance.AddEventListener(MessageDef_1.MessageDef.BrainValueChangeMessage, this.BrainValueChangeMessageHandler, this);
         // MessageDispatcher.Instance.AddEventListener(MessageDef.BrainConnectMessage,this.BrainConnectMessageHandler,this);
@@ -60,7 +60,7 @@ var Dashboard = /** @class */ (function (_super) {
         // MessageDispatcher.Instance.RemoveEventListener(MessageDef.BrainNotConnectMessage,this.BrainNotConnectMessageHandler,this);
         // MessageDispatcher.Instance.RemoveEventListener(MessageDef.BrainBlockMessage,this.BrainBlockMessageHandler,this);
         this.data = 0;
-        this.pointer.angle = 125;
+        this.pointer.angle = 0;
         this.dataLab.string = this.data.toString();
     };
     Dashboard.prototype.BrainValueChangeMessageHandler = function (module) {
@@ -121,8 +121,9 @@ var Dashboard = /** @class */ (function (_super) {
             }
             else {
                 this.data = this.Lerp(this.data, this.endNumber, dt * 2);
-                this.pointer.angle = 0 - MathUtil_1.default.reMap(this.data, 0, 100, -125, 125);
+                this.pointer.angle = 0 - MathUtil_1.default.reMap(this.data, 0, 100, 0, 250);
                 this.dataLab.string = Math.floor(this.data).toString();
+                // console.log("角度："+this.pointer.angle+"数字："+this.endNumber);
             }
         }
     };

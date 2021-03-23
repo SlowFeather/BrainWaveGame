@@ -1,6 +1,7 @@
 import { MessageDef } from "../../Def/MessageDef";
 import MessageDispatcher from "../../Manager/MessageDispatcher/MessageDispatcher";
 import SoundManager from "../../Manager/SoundManager";
+import UserManager from "../../Manager/UserManager/UserManager";
 
 const {ccclass, property} = cc._decorator;
 
@@ -49,8 +50,20 @@ export default class ConstellationScript extends cc.Component {
         // this.constellationArmatureDisplay.armature().addEventListener(dragonBones.EventObject.FADE_OUT_COMPLETE,this.AnimationEventHandler,this);
 
     }
-    
+    //============================================================================================
+    // NewPlayStar(){
+    //     this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Start");
+    //     this.allAnimation[this.currentAnimationNumber].node.active=true;
+    //     this.currentAnimationNumber++;
+    //     this.allAnimation[this.currentAnimationNumber].once('finished',()=>{
+    //         if (this.allAnimation[this.currentAnimationNumber].currentClip.name=="TianChengStar_Start") {
+    //             this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Idle");
+    //         }
+    //     },this);
+    // }
 
+
+    //===========================================================================================
     /**
      * 初始化所有动画，相当于把所有子物体透明度都变成0
      *
@@ -68,17 +81,17 @@ export default class ConstellationScript extends cc.Component {
      *
      * @memberof ConstellationScript
      */
-    StartAnimation(){
-        //this.constellationArmatureDisplay.playAnimation("xingxing"+this.currentAnimationNumber,1);
-        this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Start");
-        this.allAnimation[this.currentAnimationNumber].node.active=true;
+    // StartAnimation(){
 
-        this.allAnimation[this.currentAnimationNumber].on('finished',this.OnFinished,this);
-    }
+    //     this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Start");
+    //     this.allAnimation[this.currentAnimationNumber].node.active=true;
+
+    //     this.allAnimation[this.currentAnimationNumber].on('finished',this.OnFinished,this);
+    // }
 
     OnFinished(){
 
-        console.log("播完了"+this.allAnimation[this.currentAnimationNumber].currentClip.name);
+        //console.log("播完了"+this.allAnimation[this.currentAnimationNumber].currentClip.name);
         this.playing=false;
 
         //先取消 监听
@@ -87,28 +100,27 @@ export default class ConstellationScript extends cc.Component {
         if (this.allAnimation[this.currentAnimationNumber].currentClip.name=="TianChengStar_Start") {
             this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Idle");
             this.currentAnimationNumber++;
-            //this.PlayNextStar();
-            //检查是不是最后一个，如果是则发消息
-            if (this.currentAnimationNumber>=this.allAnimation.length) {
-                console.log("当前星座所有动画播放完毕");
-                MessageDispatcher.Instance.Dispatch(MessageDef.ConstellationAnimationEnd,this.constellationNumber);
-                return;
-            }
-
+  
             return;
         }
-        // if (this.allAnimation[this.currentAnimationNumber].currentClip.name=="TianChengStar_Idle") {
-            
-        // }
-
-        
     }
 
     PlayNextStar(){
         if (this.playing) {
-            console.log("当前正在播放动画");
+            console.error("当前正在播放动画");
             return;
         }
+
+
+        //检查是不是最后一个，如果是则发消息
+        if (this.currentAnimationNumber>=this.allAnimation.length) {
+            //console.log("当前星座所有动画播放完毕,增加星座计数");
+            UserManager.Instance.CurrentConstellationNumber += 1;
+
+            MessageDispatcher.Instance.Dispatch(MessageDef.ConstellationAnimationEnd,this.constellationNumber);
+            return;
+        }
+
         //如果是第一种动画
         // if (this.currentAnimationNumber==0) {
         //     this.playing=true;
@@ -125,7 +137,11 @@ export default class ConstellationScript extends cc.Component {
         
         this.playing=true;
         SoundManager.playEffect(3);
+        UserManager.Instance.CurrentStarNumber += 1;
 
+        if (this.allAnimation==null) {
+            return;
+        }
         if (this.allAnimation[this.currentAnimationNumber]==null) {
             return;
         }
@@ -133,8 +149,6 @@ export default class ConstellationScript extends cc.Component {
         this.allAnimation[this.currentAnimationNumber].play("TianChengStar_Start");
         this.allAnimation[this.currentAnimationNumber].on('finished',this.OnFinished,this);
         this.allAnimation[this.currentAnimationNumber].node.active=true;
-        
-        
     }
 
 

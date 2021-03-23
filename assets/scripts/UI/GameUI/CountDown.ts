@@ -1,3 +1,6 @@
+import { MessageDef } from "../../Def/MessageDef";
+import MessageDispatcher from "../../Manager/MessageDispatcher/MessageDispatcher";
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
@@ -37,12 +40,12 @@ export default class CountDown extends cc.Component {
     start () {
         
     }
-    onEnable(){
+    // onEnable(){
         
-    }
-    onDisable(){
+    // }
+    // onDisable(){
 
-    }
+    // }
 
     /**
      * 开始计时器
@@ -52,7 +55,7 @@ export default class CountDown extends cc.Component {
     StartCountDown(callback:Function){
         //3分钟
         // this.timeMinute=0;
-        // this.timeSecond=10;
+        // this.timeSecond=50;
         this.timeMinute=3;
         this.timeSecond=0;
         this.stoped=false;
@@ -103,6 +106,8 @@ export default class CountDown extends cc.Component {
         if (this.timer>=1) {
             this.timer=0;
             //console.log("过了一秒");
+            // MessageDispatcher.Instance.Dispatch(MessageDef.BrainGetValueMessage);
+            //取一次数据
             this.timeSecond-=1;
             if (this.timeSecond<0) {
                 this.timeMinute-=1;
@@ -116,6 +121,7 @@ export default class CountDown extends cc.Component {
                 }
                 this.timeSecond=59;
             }
+        
         }
         
         if (this.timeSecond.toString().length==1) {

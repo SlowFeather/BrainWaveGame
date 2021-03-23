@@ -28,6 +28,8 @@ var UIDef_1 = require("../../Def/UIDef");
 var DriveManager_1 = require("../../Manager/DriveManager/DriveManager");
 var MessageDispatcher_1 = require("../../Manager/MessageDispatcher/MessageDispatcher");
 var SoundManager_1 = require("../../Manager/SoundManager");
+var UserManager_1 = require("../../Manager/UserManager/UserManager");
+var TimeUtil_1 = require("../../Tools/TimeUtil");
 var UIUtil_1 = require("../../Tools/UIUtil");
 var CountDown_1 = require("./CountDown");
 var Dashboard_1 = require("./Dashboard");
@@ -44,8 +46,15 @@ var GameUI = /** @class */ (function (_super) {
         MessageDispatcher_1.default.Instance.Dispatch(MessageDef_1.MessageDef.BrainGameStart);
         MessageDispatcher_1.default.Instance.AddEventListener(MessageDef_1.MessageDef.BrainBlockMessage, this.BrainBlockMessageHandler, this);
         MessageDispatcher_1.default.Instance.AddEventListener(MessageDef_1.MessageDef.BrainNotConnectMessage, this.BrainNotConnectMessageHandler, this);
+        MessageDispatcher_1.default.Instance.AddEventListener(MessageDef_1.MessageDef.BrainValueChangeMessage, this.BrainValueChangeMessageHandler, this);
         //开始访问设备
         DriveManager_1.default.Instance.StartPinDrive();
+        //记录开始时间戳
+        UserManager_1.default.Instance.InitPostResultModel();
+        UserManager_1.default.Instance.PostResultModel.startTime = TimeUtil_1.TimeUtil.getYMDHMS(Date.now()).toString();
+        //2021-03-19 12:45:00
+        // var date2 = new Date("2016/01/27 12:00:00")
+        // console.log();
     };
     GameUI.prototype.onDisable = function () {
         //发送游戏结束消息
@@ -57,10 +66,28 @@ var GameUI = /** @class */ (function (_super) {
         // DriveManager.Instance.OnBrainValueChangeEvent=null;
         MessageDispatcher_1.default.Instance.RemoveEventListener(MessageDef_1.MessageDef.BrainBlockMessage, this.BrainBlockMessageHandler, this);
         MessageDispatcher_1.default.Instance.RemoveEventListener(MessageDef_1.MessageDef.BrainNotConnectMessage, this.BrainNotConnectMessageHandler, this);
+        MessageDispatcher_1.default.Instance.RemoveEventListener(MessageDef_1.MessageDef.BrainValueChangeMessage, this.BrainValueChangeMessageHandler, this);
         // DriveManager.Instance.OnBrainNotConnectEvent=null;
+        //记录游戏结束时间戳
+        // UserManager.Instance.PostResultModel.endTime=Date.now().toString();
+        UserManager_1.default.Instance.PostResultModel.endTime = TimeUtil_1.TimeUtil.getYMDHMS(Date.now()).toString();
     };
     GameUI.prototype.start = function () {
         // console.log("-->进入GameUI start");
+    };
+    GameUI.prototype.BrainValueChangeMessageHandler = function (module) {
+        var dateModule = new UserManager_1.PostResultData();
+        dateModule.delta = module.brain[0].Delta;
+        dateModule.theta = module.brain[0].Theta;
+        dateModule.lowAlpha = module.brain[0].LowAlpha;
+        dateModule.highAlpha = module.brain[0].HighAlpha;
+        dateModule.lowBeta = module.brain[0].LowBeta;
+        dateModule.highBeta = module.brain[0].HighBeta;
+        dateModule.lowGamma = module.brain[0].LowGamma;
+        dateModule.highGamma = module.brain[0].HighGamma;
+        dateModule.concentration = module.brain[0].Concentration;
+        dateModule.relaxation = module.brain[0].Relaxation;
+        UserManager_1.default.Instance.PostResultModel.data.push(dateModule);
     };
     GameUI.prototype.BrainNotConnectMessageHandler = function () {
         if (this.countDown.stoped) {

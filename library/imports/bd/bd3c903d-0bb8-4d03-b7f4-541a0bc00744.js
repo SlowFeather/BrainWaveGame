@@ -40,6 +40,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var CSV_DIR = "StaticDatas/";
+// const CSV_DIR = "Data/";
 function PreLoadAllCsv() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {

@@ -52,4 +52,10 @@ export enum MessageDef {
      */
     BrainValueChangeMessage="BrainValueChangeMessage",
 
+
+    /**
+     * Test 让脑机获取数据
+     */
+    BrainGetValueMessage="BrainGetValueMessage"
+
 }

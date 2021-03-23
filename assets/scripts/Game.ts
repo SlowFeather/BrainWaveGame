@@ -47,7 +47,9 @@ export default class Game extends cc.Component {
     start () {
         // TransformUtil.GetWorldPostation2(this.node);
 
-        StorageUtil.storageData(StorageDef.StarLight,3);
+        // StorageUtil.storageData(StorageDef.StarLight,3);
+        // StorageUtil.storageData(StorageDef.Token,"Hello");
+
         // console.log(StorageUtil.getData("bool",false));
         // StorageUtil.removeData("bool");
 

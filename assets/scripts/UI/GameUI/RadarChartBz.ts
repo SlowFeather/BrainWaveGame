@@ -196,7 +196,7 @@ export default class RadarChartBz extends cc.Component {
         this.HighBeta=MathUtil.reMap(Number(highBeta),0,16777216,0,100) ;
         this.LowBeta=MathUtil.reMap(Number(lowBeta),0,16777216,0,100) ;
         this.HighAlpha=MathUtil.reMap(Number(highAlpha),0,16777216,0,100) ;
-        console.log("--->LowAlpha 原："+Number(module.brain[0].LowAlpha)+"-后："+lowAlpha+"-最后："+this.LowAlpha);
+        ///console.log("--->LowAlpha 原："+Number(module.brain[0].LowAlpha)+"-后："+lowAlpha+"-最后："+this.LowAlpha);
 
 
         // this.Theta=Number(module.brain[0].Theta);
