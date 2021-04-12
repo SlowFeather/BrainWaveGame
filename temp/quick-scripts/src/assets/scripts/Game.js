@@ -24,6 +24,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var UIDef_1 = require("./Def/UIDef");
+var LoggerUtil_1 = require("./Tools/LoggerUtil");
 var UIUtil_1 = require("./Tools/UIUtil");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var Game = /** @class */ (function (_super) {
@@ -43,6 +44,7 @@ var Game = /** @class */ (function (_super) {
         // StorageUtil.storageData(StorageDef.Token,"Hello");
         // console.log(StorageUtil.getData("bool",false));
         // StorageUtil.removeData("bool");
+        LoggerUtil_1.default.debug("Hello");
         UIUtil_1.default.ShowBaseUI(UIDef_1.UIDef.LoadingUI);
         // HttpUtil.GET("http://127.0.0.1:8080/hello.php",{id:"1"},(state,obj)=>{
         //     console.log(state+ obj);

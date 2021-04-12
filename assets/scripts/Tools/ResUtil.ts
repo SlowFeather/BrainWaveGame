@@ -2,7 +2,13 @@ import { List } from "./DataStructure/List";
 
 export default class ResUtil {
     
-    // public static 
+    /**
+     * 资源名称与资源列表
+     *
+     * @static
+     * @type {{ [key: string]: cc.Asset }}
+     * @memberof ResUtil
+     */
     public static ResDictionary: { [key: string]: cc.Asset } = {} 
 
     public static prefabList:List<cc.Node> = new List<cc.Node>();
@@ -55,12 +61,16 @@ export default class ResUtil {
     }
 
 
-    public static LoadDir(dirpath: string, callfun){
+    public static LoadDir(dirpath: string, callfun,errorfun){
         cc.loader.loadResDir(dirpath, function (err, assets) {
             
+            if (err) {
+                errorfun();
+            }
             if (callfun) {
                 callfun(assets);
             }
+
         });
     }
     public static ReleaseRes(res){

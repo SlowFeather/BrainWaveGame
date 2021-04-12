@@ -16,6 +16,7 @@ require('./assets/scripts/StaticDatas/SoundTableData');
 require('./assets/scripts/Tools/CookieUtil');
 require('./assets/scripts/Tools/DataStructure/List');
 require('./assets/scripts/Tools/HTTPUtil');
+require('./assets/scripts/Tools/LoggerUtil');
 require('./assets/scripts/Tools/MathUtil');
 require('./assets/scripts/Tools/ResUtil');
 require('./assets/scripts/Tools/StorageUtil');

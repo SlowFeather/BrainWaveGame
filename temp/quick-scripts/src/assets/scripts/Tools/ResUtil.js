@@ -48,8 +48,11 @@ var ResUtil = /** @class */ (function () {
             }
         });
     };
-    ResUtil.LoadDir = function (dirpath, callfun) {
+    ResUtil.LoadDir = function (dirpath, callfun, errorfun) {
         cc.loader.loadResDir(dirpath, function (err, assets) {
+            if (err) {
+                errorfun();
+            }
             if (callfun) {
                 callfun(assets);
             }
@@ -58,7 +61,13 @@ var ResUtil = /** @class */ (function () {
     ResUtil.ReleaseRes = function (res) {
         cc.loader.releaseAsset(res);
     };
-    // public static 
+    /**
+     * 资源名称与资源列表
+     *
+     * @static
+     * @type {{ [key: string]: cc.Asset }}
+     * @memberof ResUtil
+     */
     ResUtil.ResDictionary = {};
     ResUtil.prefabList = new List_1.List();
     return ResUtil;

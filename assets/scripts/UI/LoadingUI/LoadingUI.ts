@@ -68,14 +68,13 @@ export default class LoadingUI extends cc.Component {
     async LoadRes() {
         //加载所有UIPrefabs
         await ResUtil.LoadDir("prefabs/ui", (assets) => {
-            // console.log(assets);
             assets.forEach(element => {
-                //console.log(element.name);
                 ResUtil.ResDictionary[element.name] = element;
-                //cc.instantiate(element);
             });
             this._processingValue += 10;
             console.log("-->所有UIPrefabs加载完毕,共有" + assets.length + "个");
+        },()=>{
+            console.log("-->加载UIPrefabs出现问题");
         });
 
         //加载所有GamePrefabs
@@ -86,6 +85,8 @@ export default class LoadingUI extends cc.Component {
             this._processingValue += 10;
             console.log("-->所有GamePrefabs加载完毕,共有" + assets.length + "个");
 
+        },()=>{
+            console.log("-->加载GamePrefabs出现问题");
         });
 
     }
@@ -99,21 +100,10 @@ export default class LoadingUI extends cc.Component {
                     this._processingValue += (1 / tableCount) * 80;
                 } else {
                     console.log("Load Table Error!");
-
                 }
-
-                // this._processingValue += (1 / tableCount) * 100/tableCount;
             });
         }
     }
-    // AnimSubpackSuccessfully(err){
-    //     console.log(this)
-    //     if (err) {
-    //         return console.error(err);
-    //     }
-    //     console.log('load anim subpack successfully.');
-    //     this._processingValue += 10;
-    // }
 
     ShowStartUI() {
 

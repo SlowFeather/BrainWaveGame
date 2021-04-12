@@ -117,14 +117,13 @@ var LoadingUI = /** @class */ (function (_super) {
                     case 0: 
                     //加载所有UIPrefabs
                     return [4 /*yield*/, ResUtil_1.default.LoadDir("prefabs/ui", function (assets) {
-                            // console.log(assets);
                             assets.forEach(function (element) {
-                                //console.log(element.name);
                                 ResUtil_1.default.ResDictionary[element.name] = element;
-                                //cc.instantiate(element);
                             });
                             _this._processingValue += 10;
                             console.log("-->所有UIPrefabs加载完毕,共有" + assets.length + "个");
+                        }, function () {
+                            console.log("-->加载UIPrefabs出现问题");
                         })];
                     case 1:
                         //加载所有UIPrefabs
@@ -136,6 +135,8 @@ var LoadingUI = /** @class */ (function (_super) {
                                 });
                                 _this._processingValue += 10;
                                 console.log("-->所有GamePrefabs加载完毕,共有" + assets.length + "个");
+                            }, function () {
+                                console.log("-->加载GamePrefabs出现问题");
                             })];
                     case 2:
                         //加载所有GamePrefabs
@@ -166,7 +167,6 @@ var LoadingUI = /** @class */ (function (_super) {
                                 else {
                                     console.log("Load Table Error!");
                                 }
-                                // this._processingValue += (1 / tableCount) * 100/tableCount;
                             })];
                     case 2:
                         _a.sent();
@@ -179,14 +179,6 @@ var LoadingUI = /** @class */ (function (_super) {
             });
         });
     };
-    // AnimSubpackSuccessfully(err){
-    //     console.log(this)
-    //     if (err) {
-    //         return console.error(err);
-    //     }
-    //     console.log('load anim subpack successfully.');
-    //     this._processingValue += 10;
-    // }
     LoadingUI.prototype.ShowStartUI = function () {
         //显示开始界面
         // console.log(SoundTableData.getById(1));

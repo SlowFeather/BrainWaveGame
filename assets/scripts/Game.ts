@@ -4,6 +4,7 @@ import DriveManager from "./Manager/DriveManager/DriveManager";
 import MessageDispatcher from "./Manager/MessageDispatcher/MessageDispatcher";
 // import { PreLoadCsvSync, TableReader } from "./Tools/TableReader";
 import { HttpUtil } from "./Tools/HTTPUtil";
+import Logger from "./Tools/LoggerUtil";
 import StorageUtil from "./Tools/StorageUtil";
 import TransformUtil from "./Tools/TransformUtil";
 import UILoader from "./Tools/UILoader";
@@ -53,7 +54,7 @@ export default class Game extends cc.Component {
         // console.log(StorageUtil.getData("bool",false));
         // StorageUtil.removeData("bool");
 
-
+        Logger.debug("Hello");
         UIUtil.ShowBaseUI(UIDef.LoadingUI);
 
         // HttpUtil.GET("http://127.0.0.1:8080/hello.php",{id:"1"},(state,obj)=>{
